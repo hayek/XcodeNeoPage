@@ -297,12 +297,12 @@ h1, h2, h3 {
 
 @media (max-width: 767px) {
     .navbar {
-        padding: 1px 8px;
+        padding: 8px 8px;
     }
 
     .navbar-content {
         gap: 6px;
-        padding: 1px 3px;
+        padding: 8px 3px;
     }
 
     .navbar-left {
