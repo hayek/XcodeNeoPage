@@ -208,7 +208,7 @@ h1, h2, h3 {
 .navbar-left {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 32px;
 }
 
 .navbar-center {
