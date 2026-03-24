@@ -125,10 +125,9 @@ h1, h2, h3 {
 }
 
 .theme-switcher-bottom {
-    position: fixed;
-    top: auto;
-    bottom: 12px;
-    right: 12px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
     opacity: 1;
     transform: translateY(0);
     padding: 4px;
@@ -1773,6 +1772,7 @@ h1, h2, h3 {
 
 /* Footer */
 footer {
+    position: relative;
     text-align: center;
     padding: 60px 20px 40px;
     opacity: 0.6;
