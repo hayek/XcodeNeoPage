@@ -172,18 +172,21 @@ mcpFlipButtons.forEach(button => {
 });
 
 const faqItems = document.querySelectorAll('.faq-item');
-faqItems.forEach(item => {
+faqItems.forEach((item, index) => {
     const summary = item.querySelector('summary');
 
     summary.addEventListener('click', (e) => {
         if (item.open) {
             e.preventDefault();
+            logFAQInteraction(index, 'closed');
             item.classList.add('closing');
 
             setTimeout(() => {
                 item.open = false;
                 item.classList.remove('closing');
             }, TIMINGS.FAQ_CLOSE_ANIMATION);
+        } else {
+            logFAQInteraction(index, 'opened');
         }
     });
 });
