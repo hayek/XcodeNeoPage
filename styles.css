@@ -847,14 +847,7 @@ h1, h2, h3 {
 
 @media (max-width: 767px) {
     .mcp-image {
-        aspect-ratio: 1 / 1;
         max-width: 100px;
-    }
-}
-
-@media (max-width: 480px) {
-    .mcp-image {
-        max-width: 80px;
     }
 }
 
