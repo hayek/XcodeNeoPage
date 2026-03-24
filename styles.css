@@ -1777,8 +1777,9 @@ h1, h2, h3 {
 
 .author-links {
     display: flex;
-    gap: 16px;
-    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
 }
 
 .author-links a {
@@ -1800,7 +1801,7 @@ h1, h2, h3 {
     }
 
     .author-links {
-        gap: 12px;
+        gap: 5px;
     }
 }
 
@@ -1812,8 +1813,7 @@ h1, h2, h3 {
     }
 
     .author-links {
-        gap: 8px;
-        flex-wrap: wrap;
+        gap: 4px;
     }
 }
 
