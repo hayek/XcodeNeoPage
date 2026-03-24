@@ -297,33 +297,33 @@ h1, h2, h3 {
 
 @media (max-width: 767px) {
     .navbar {
-        padding: 2px 8px;
+        padding: 1px 8px;
     }
 
     .navbar-content {
-        gap: 8px;
-        padding: 2px 4px;
+        gap: 6px;
+        padding: 1px 3px;
     }
 
     .navbar-left {
-        gap: 4px;
+        gap: 3px;
     }
 
     .navbar-center {
-        gap: 8px;
+        gap: 6px;
     }
 
     .navbar-logo {
-        font-size: 13px;
-    }
-
-    .navbar-link {
         font-size: 12px;
     }
 
+    .navbar-link {
+        font-size: 11px;
+    }
+
     .navbar-download {
-        width: 85px;
-        min-height: 28px;
+        width: 80px;
+        min-height: 24px;
     }
 }
 
