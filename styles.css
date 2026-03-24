@@ -1033,8 +1033,7 @@ h1, h2, h3 {
 .card-text-content {
     width: 70%;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    align-items: flex-end;
     padding-right: 20px;
 }
 
