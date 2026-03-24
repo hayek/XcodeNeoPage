@@ -1768,11 +1768,13 @@ h1, h2, h3 {
     border-top: 1px solid var(--border-color, rgba(0, 0, 0, 0.1));
     font-size: 13px;
     opacity: 0.7;
+    text-align: center;
 }
 
 .author-row {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 12px;
 }
 
