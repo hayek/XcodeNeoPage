@@ -1783,13 +1783,25 @@ h1, h2, h3 {
 }
 
 .author-links a {
-    color: inherit;
+    display: flex;
+    align-items: center;
     text-decoration: none;
+}
+
+.author-link-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.author-icon {
+    width: 24px;
+    height: 24px;
     opacity: 0.7;
     transition: opacity 0.2s ease;
 }
 
-.author-links a:hover {
+.author-links a:hover .author-icon {
     opacity: 1;
 }
 
