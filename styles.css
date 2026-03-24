@@ -852,6 +852,13 @@ h1, h2, h3 {
     margin: 0;
 }
 
+@media (max-width: 767px) {
+    .mcp-text {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+}
+
 .mcp-text strong {
     font-weight: 600;
 }
@@ -887,12 +894,25 @@ h1, h2, h3 {
     height: 100%;
     transition: opacity 0.4s ease, visibility 0.4s ease;
     padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+@media (max-width: 767px) {
+    .mcp-flip-front,
+    .mcp-flip-back {
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+    }
 }
 
 @media (max-width: 480px) {
     .mcp-flip-front,
     .mcp-flip-back {
         padding: 16px;
+        gap: 8px;
     }
 }
 
@@ -929,6 +949,13 @@ h1, h2, h3 {
 .mcp-image-container {
     position: relative;
     margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+    .mcp-image-container {
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
 }
 
 .mcp-flip-button {
