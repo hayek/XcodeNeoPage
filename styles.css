@@ -1763,8 +1763,8 @@ h1, h2, h3 {
 
 /* Author Info */
 .author-info {
-    margin-top: 20px;
-    padding-top: 20px;
+    margin-top: 40px;
+    padding-top: 40px;
     border-top: 1px solid var(--border-color, rgba(0, 0, 0, 0.1));
     font-size: 13px;
     opacity: 0.7;
