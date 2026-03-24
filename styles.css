@@ -1031,7 +1031,7 @@ h1, h2, h3 {
 }
 
 .card-text-content {
-    width: 40%;
+    width: 30%;
     display: flex;
     align-items: flex-end;
     padding-right: 20px;
@@ -1050,7 +1050,7 @@ h1, h2, h3 {
 }
 
 .card-flow-image {
-    width: 60%;
+    width: 70%;
     aspect-ratio: 2122 / 1156;
 }
 
