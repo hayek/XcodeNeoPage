@@ -1031,7 +1031,7 @@ h1, h2, h3 {
 }
 
 .card-text-content {
-    width: 70%;
+    width: 50%;
     display: flex;
     align-items: flex-end;
     padding-right: 20px;
@@ -1050,8 +1050,18 @@ h1, h2, h3 {
 }
 
 .card-flow-image {
-    width: 30%;
+    width: 50%;
     aspect-ratio: 2122 / 1156;
+}
+
+@media (max-width: 767px) {
+    .card-text-content {
+        width: 70%;
+    }
+
+    .card-flow-image {
+        width: 30%;
+    }
 }
 
 .projects-background {
