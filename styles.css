@@ -232,7 +232,7 @@ h1, h2, h3 {
     background: transparent;
     border: none;
     cursor: pointer;
-    padding: 0;
+    padding-left: 8px;
     margin: 0;
     transition: opacity 0.2s ease;
     white-space: nowrap;
