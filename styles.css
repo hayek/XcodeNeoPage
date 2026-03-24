@@ -865,13 +865,13 @@ h1, h2, h3 {
 
 @media (max-width: 767px) {
     .mcp-flip-card {
-        min-height: 280px;
+        min-height: 200px;
     }
 }
 
 @media (max-width: 480px) {
     .mcp-flip-card {
-        min-height: 220px;
+        min-height: 140px;
     }
 }
 
