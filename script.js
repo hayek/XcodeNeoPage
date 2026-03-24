@@ -1,4 +1,26 @@
-import { logTabClick, logDownloadClick, logFAQInteraction, logExternalLinkClick, logThemeChange, logPageLoad } from './analytics.js';
+// Analytics - conditional import based on protocol
+// When opened locally (file://), use no-op stubs; on HTTP/HTTPS, load real analytics
+let logTabClick, logDownloadClick, logFAQInteraction, logExternalLinkClick, logThemeChange, logPageLoad;
+
+if (window.location.protocol === 'file:') {
+  // Local file testing - provide no-op stubs (analytics disabled)
+  logTabClick = () => {};
+  logDownloadClick = () => {};
+  logFAQInteraction = () => {};
+  logExternalLinkClick = () => {};
+  logThemeChange = () => {};
+  logPageLoad = () => {};
+  console.log('Analytics disabled (local file:// testing)');
+} else {
+  // HTTP/HTTPS - import actual Firebase analytics
+  const analytics = await import('./analytics.js');
+  logTabClick = analytics.logTabClick;
+  logDownloadClick = analytics.logDownloadClick;
+  logFAQInteraction = analytics.logFAQInteraction;
+  logExternalLinkClick = analytics.logExternalLinkClick;
+  logThemeChange = analytics.logThemeChange;
+  logPageLoad = analytics.logPageLoad;
+}
 
 // Theme Switcher
 const themeButtons = document.querySelectorAll('.theme-button');
