@@ -1801,8 +1801,8 @@ h1, h2, h3 {
 }
 
 .author-icon {
-    width: 18px;
-    height: 18px;
+    width: 14px;
+    height: 14px;
     opacity: 0.7;
     transition: opacity 0.2s ease;
     filter: invert(1) brightness(1.2);
