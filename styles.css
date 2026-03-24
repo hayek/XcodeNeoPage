@@ -1213,7 +1213,7 @@ h1, h2, h3 {
 
 @media (max-width: 480px) {
     .projects-background .card-title-text {
-        font-size: clamp(7px, calc(14px - (480px - 100vw) / 180px * 7px), 14px);
+        font-size: clamp(12px, calc(14px - (480px - 100vw) / 180px * 2px), 14px);
     }
 
     .card-layout-horizontal {
@@ -1262,6 +1262,20 @@ h1, h2, h3 {
     color: var(--primary-color);
     margin: 0;
     font-weight: 500;
+}
+
+.card-title-text-mobile {
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .card-title-text-desktop {
+        display: none;
+    }
+
+    .card-title-text-mobile {
+        display: block;
+    }
 }
 
 /* Feature Row with 3/4 and 1/4 */
