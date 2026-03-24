@@ -106,7 +106,7 @@ h1, h2, h3 {
     position: fixed;
     top: 20px;
     right: 20px;
-    display: flex;
+    display: none;
     gap: 8px;
     background-color: var(--card-bg);
     padding: 8px;
@@ -125,13 +125,14 @@ h1, h2, h3 {
 }
 
 .theme-switcher-bottom {
-    position: absolute;
+    position: fixed;
     bottom: 20px;
     right: 20px;
     opacity: 1;
     transform: translateY(0);
     padding: 4px;
     gap: 4px;
+    pointer-events: all;
 }
 
 .theme-button {
@@ -1772,7 +1773,6 @@ h1, h2, h3 {
 
 /* Footer */
 footer {
-    position: relative;
     text-align: center;
     padding: 60px 20px 40px;
     opacity: 0.6;
