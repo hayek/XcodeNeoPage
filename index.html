@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xcode Neo - Building native iPhone, iPad, Mac apps for the AI area</title>
+    <meta name="description" content="Xcode Neo is a modern Mac app for building native iPhone, iPad, and Mac apps. In beta.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hayek.github.io/XcodeNeoPage/">
+    <meta property="og:title" content="Xcode Neo - Building native iPhone, iPad, Mac apps">
+    <meta property="og:description" content="Xcode Neo is a modern Mac app for building native iPhone, iPad, and Mac apps. In beta.">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://hayek.github.io/XcodeNeoPage/">
+    <meta name="twitter:title" content="Xcode Neo - Building native iPhone, iPad, Mac apps">
+    <meta name="twitter:description" content="Xcode Neo is a modern Mac app for building native iPhone, iPad, and Mac apps. In beta.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <div class="navbar-left">
+                <img src="Assets/icon-light.png" alt="Xcode Neo" class="navbar-icon">
+                <button class="navbar-logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Xcode Neo</button>
+            </div>
+            <div class="navbar-center">
+                <a href="#projects-card" class="navbar-link">Features</a>
+                <a href="#faq" class="navbar-link">FAQ</a>
+            </div>
+            <a href="https://github.com/hayek/XcodeNeo-releases/releases/download/0.2.0/Xcode.Neo.dmg" class="navbar-download" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 140 40" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="140" height="40" rx="20" fill="var(--primary-color)"/>
+                    <text x="70" y="22" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="600" fill="var(--bg-color)" text-anchor="middle" dominant-baseline="middle">Download</text>
+                </svg>
+            </a>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero-intro">
+        <div class="container">
+            <div class="hero-intro-content">
+                <div class="hero-icon-wrapper">
+                    <img src="Assets/icon-light.png" alt="Xcode Neo" class="hero-icon">
+                </div>
+                <div class="hero-title-row">
+                    <h1 class="hero-intro-title">Xcode Neo</h1>
+                    <span class="beta-badge">Beta</span>
+                </div>
+                <p class="hero-intro-subtitle">Build iOS & macOS apps in the age of AI</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Highlights -->
+    <section class="section highlights-section">
+        <div class="container">
+
+            <!-- Main Screenshot -->
+            <div class="main-screenshot-wrapper">
+                <div class="main-screenshot">
+                    <img src="Assets/screenshot-ai.png" alt="Use your own AI" class="screenshot-image active" data-feature="ai">
+                    <img src="Assets/screenshot-timeline.png" alt="Timeline" class="screenshot-image" data-feature="timeline">
+                    <img src="Assets/miniview.png" alt="Mini View" class="screenshot-image" data-feature="miniview">
+                </div>
+            </div>
+
+            <!-- Feature Tabs -->
+            <div class="feature-tabs-wrapper">
+                <div class="feature-tabs">
+                    <button class="feature-tab active" data-feature="ai">Use your own AI</button>
+                    <button class="feature-tab" data-feature="timeline">Timeline</button>
+                    <button class="feature-tab" data-feature="miniview">Mini View</button>
+                </div>
+            </div>
+
+            <!-- Feature Description -->
+            <div class="feature-description">
+                <p class="feature-description-text"><strong>Bring your own AI.</strong> Connect Claude, your custom models, or any AI agent directly to your projects through MCP Server integration. Each project gets dedicated terminal tabs that auto-label from your commands. Let AI agents build, test, and run alongside you.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section">
+        <div class="container">
+            <h2 class="section-title">The Xcode you've been waiting for</h2>
+
+            <div class="hero-image-section">
+                <img src="Assets/mac.png" alt="Xcode Neo on Mac" class="hero-section-image">
+                <p class="hero-section-text">The new way to develop iOS and Mac apps. Xcode Neo brings AI-powered development to the next level, letting you focus on building great apps while the tools handle the complexity.</p>
+            </div>
+
+            <div id="projects-card" class="card card-full-width card-layout-horizontal projects-background">
+                <video autoplay muted class="projects-video" id="projectsVideo" playsinline>
+                    <source src="Assets/projects.mov" type="video/quicktime">
+                </video>
+                <div class="card-text-content">
+                    <p class="card-title-text"><strong>Work on multiple projects at once.</strong> In the AI era, developers don't work on single projects anymore. Xcode Neo brings all your projects into one unified workspace, letting you and your AI agents connect ideas across codebases and build better solutions, faster.</p>
+                </div>
+            </div>
+
+            <div class="card card-full-width card-layout-horizontal">
+                <div class="card-text-content">
+                    <p class="card-title-text"><strong>Your flow, your opinion.</strong> Wrappers will never be better than the real thing. You get a full terminal so you can use your AI agents, skills, and integrations exactly the way you want them. Build, test, debug, and deploy with complete control.</p>
+                </div>
+                <img src="Assets/flow.png" alt="Your flow, your opinion" class="image-card card-flow-image">
+            </div>
+
+            <div class="card-row-mcp">
+                <div class="card mcp-card mcp-card-large">
+                    <img src="Assets/ideAi.png" alt="IDE for the AI tool" class="image-card mcp-image-large">
+                    <p class="mcp-text"><strong>IDE for the AI tool.</strong> With the included Xcode Neo MCP, AI agents can build, run and even inspect the console output. The AI can add logs, run, inspect logs, iterate on solution and loop until task is done.</p>
+                </div>
+                <div class="card mcp-card mcp-card-small mcp-flip-card">
+                    <div class="mcp-flip-container">
+                        <div class="mcp-flip-front">
+                            <div class="mcp-image-container">
+                                <img src="Assets/mcp-install.png" alt="One Click MCP installation" class="image-card mcp-image">
+                                <button class="mcp-flip-button" aria-label="Toggle card">
+                                    <svg viewBox="0 0 24 24" class="mcp-flip-icon" fill="currentColor">
+                                        <rect x="11" y="5" width="2" height="14" rx="1"/>
+                                        <rect x="5" y="11" width="14" height="2" rx="1"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <p class="mcp-text"><strong>One Click MCP installation.</strong> No need to get lost in config json files.</p>
+                        </div>
+                        <div class="mcp-flip-back">
+                            <button class="mcp-flip-button mcp-flip-button-back" aria-label="Toggle card">
+                                <span class="mcp-flip-icon mcp-flip-icon-back">✗</span>
+                            </button>
+                            <svg class="mcp-back-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="4" y="4" width="16" height="16" rx="2"/>
+                                <path d="M9 9h6v6H9z"/>
+                                <line x1="9" y1="4" x2="9" y2="2"/>
+                                <line x1="15" y1="4" x2="15" y2="2"/>
+                                <line x1="9" y1="22" x2="9" y2="20"/>
+                                <line x1="15" y1="22" x2="15" y2="20"/>
+                                <line x1="4" y1="9" x2="2" y2="9"/>
+                                <line x1="22" y1="9" x2="20" y2="9"/>
+                                <line x1="4" y1="15" x2="2" y2="15"/>
+                                <line x1="22" y1="15" x2="20" y2="15"/>
+                            </svg>
+                            <p class="mcp-text-back"><strong>Install the Xcode Neo MCP with one click.</strong><br>MCP are installed per project so they dont take context space where you do not need it.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-row-feature">
+                <div class="card feature-placeholder-card feature-card-with-text">
+                    <img src="Assets/miniview-closeup.png" alt="Mini View" class="image-card feature-image">
+                    <p class="feature-card-text"><strong>Never leave your editor.</strong> A floating window that lives above your favorite IDE. Build, run, stop, or test without context switching.</p>
+                </div>
+                <div class="card feature-placeholder-card feature-card-with-icon">
+                    <div class="shortcut-keys">
+                        <img src="Assets/cmd.svg" alt="Cmd" class="shortcut-key-icon">
+                        <img src="Assets/option.svg" alt="Option" class="shortcut-key-icon">
+                        <span class="shortcut-letter">B</span>
+                    </div>
+                    <p class="feature-card-text"><strong>One global shortcut.</strong> Trigger Xcode Neo with Cmd+Alt+B and stay in flow state while the app handles the heavy lifting.</p>
+                </div>
+            </div>
+
+            <div class="card-row-2-2 card-row-square-images">
+                <div class="card feature-placeholder-card feature-card-with-text">
+                    <img src="Assets/actions.png" alt="Actions" class="image-card feature-image">
+                    <p class="feature-card-text"><strong>Quick actions.</strong> Right-click any file or folder to run custom actions. Integrate your tools and workflows directly into the app.</p>
+                </div>
+                <div class="card feature-placeholder-card feature-card-with-text">
+                    <img src="Assets/newProject.png" alt="New Project" class="image-card feature-image">
+                    <p class="feature-card-text"><strong>Start fresh.</strong> Create new projects with templates and presets. Get up and running in seconds, not hours.</p>
+                </div>
+            </div>
+
+            <h3 class="features-subtitle">And much more</h3>
+
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3 class="feature-item-title">Project Info</h3>
+                    <p class="feature-item-text">Update app versions and build numbers without context switching</p>
+                </div>
+                <div class="feature-item">
+                    <h3 class="feature-item-title">Scheme Editor</h3>
+                    <p class="feature-item-text">Configure build schemes without the complexity</p>
+                </div>
+                <div class="feature-item">
+                    <h3 class="feature-item-title">Git Integration</h3>
+                    <p class="feature-item-text">Commit, branch, and collaborate—all without leaving the app</p>
+                </div>
+                <div class="feature-item">
+                    <h3 class="feature-item-title">Organizer</h3>
+                    <p class="feature-item-text">Archive your builds, organize your releases in one place</p>
+                </div>
+                <div class="feature-item">
+                    <h3 class="feature-item-title">Simulators</h3>
+                    <p class="feature-item-text">Launch iOS and macOS simulators in seconds, control from one place</p>
+                </div>
+                <div class="feature-item">
+                    <h3 class="feature-item-title">Tests</h3>
+                    <p class="feature-item-text">You and your AI see every test result. Debug and iterate together in real time</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apps Created with Xcode Neo -->
+    <section class="section section-reduced-spacing">
+        <div class="container">
+            <h2 class="section-title">Apps Created with Xcode Neo</h2>
+
+            <div class="apps-scroll-container">
+                <a href="https://hayek.github.io/ClaudeUsagePage/" class="card app-showcase-card app-card-link" target="_blank" rel="noopener noreferrer">
+                    <img src="Assets/icon-ClaudeUsage.png" alt="Usage for Claude" class="app-card-icon">
+                    <h3 class="app-card-title">Usage for Claude</h3>
+                    <p class="app-card-subtitle">Track your subscription Usage.</p>
+                    <span class="app-visit-link">Visit Website →</span>
+                </a>
+                <a href="https://hayek.github.io/VanishingNotesPage/" class="card app-showcase-card app-card-link" target="_blank" rel="noopener noreferrer">
+                    <img src="Assets/icon-VN.png" alt="Vanishing Notes" class="app-card-icon">
+                    <h3 class="app-card-title">Vanishing Notes</h3>
+                    <p class="app-card-subtitle">Notes that disappear.</p>
+                    <span class="app-visit-link">Visit Website →</span>
+                </a>
+                <a href="https://123repo.com/" class="card app-showcase-card app-card-link" target="_blank" rel="noopener noreferrer">
+                    <img src="Assets/icon-123repo.png" alt="123Repo" class="app-card-icon">
+                    <h3 class="app-card-title">123Repo</h3>
+                    <p class="app-card-subtitle">Your projects. Always visible.</p>
+                    <span class="app-visit-link">Visit Website →</span>
+                </a>
+                <a href="https://hayek.github.io/Json2ToonPage" class="card app-showcase-card app-card-link" target="_blank" rel="noopener noreferrer">
+                    <img src="Assets/icon-j2n.png" alt="Json 2 Toon" class="app-card-icon">
+                    <h3 class="app-card-title">Json 2 Toon</h3>
+                    <p class="app-card-subtitle">Convert JSON to TOON and back. Seamlessly.</p>
+                    <span class="app-visit-link">Visit Website →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+
+            <div class="faq-accordion">
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>What is Xcode Neo?</span>
+                        <span class="faq-icon"></span>
+                    </summary>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Xcode Neo is a modern Mac app for building native iPhone, iPad, and Mac applications with advanced developer tools and AI integration.</p>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Does Xcode Neo include a code editor?</span>
+                        <span class="faq-icon"></span>
+                    </summary>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>No, source code is just an implementation detail.<br>Still want to edit? "Open in Xcode" buttons are there for the remaining few of you.</p>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>When will the beta end?</span>
+                        <span class="faq-icon"></span>
+                    </summary>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>We're actively developing Xcode Neo and will announce the stable release timeline soon. Stay tuned for updates.</p>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Can I use my own AI models?</span>
+                        <span class="faq-icon"></span>
+                    </summary>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Yes, Xcode Neo supports integrating your own AI models through the MCP (Model Context Protocol) system.</p>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>What platforms does Xcode Neo support?</span>
+                        <span class="faq-icon"></span>
+                    </summary>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Xcode Neo is a Mac app that allows you to build apps for iPhone, iPad, and macOS.</p>
+                        </div>
+                    </div>
+                </details>
+
+<details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Do I need Xcode installed?</span>
+                        <span class="faq-icon"></span>
+                    </summary>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Yes, Xcode Neo requires a full Xcode installation to build, run, test, and manage your iOS and macOS projects. You can download Xcode for free from the App Store.</p>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Xcode Neo © 2026. Building native apps for iOS, iPadOS, and macOS.</p>
+            <p style="margin-top: 10px;">Modern development tools for the AI era.</p>
+        </div>
+    </footer>
+
+    <!-- Theme Switcher (Bottom) -->
+    <div class="theme-switcher theme-switcher-bottom">
+        <button class="theme-button" data-theme="light" title="Light mode">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"/>
+                <line x1="12" y1="1" x2="12" y2="3"/>
+                <line x1="12" y1="21" x2="12" y2="23"/>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                <line x1="1" y1="12" x2="3" y2="12"/>
+                <line x1="21" y1="12" x2="23" y2="12"/>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+        </button>
+        <button class="theme-button active" data-theme="system" title="System preference">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                <line x1="8" y1="21" x2="16" y2="21"/>
+                <line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+        </button>
+        <button class="theme-button" data-theme="dark" title="Dark mode">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
