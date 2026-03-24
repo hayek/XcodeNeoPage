@@ -1220,6 +1220,14 @@ h1, h2, h3 {
         gap: 16px;
     }
 
+    .card-layout-horizontal:has(.card-flow-image) {
+        flex-direction: column-reverse;
+    }
+
+    .card-layout-horizontal:has(.card-flow-image) .card-text-content {
+        width: 100%;
+    }
+
     .card-layout-horizontal .card-title-text {
         width: 100%;
         padding-right: 0;
@@ -1232,7 +1240,7 @@ h1, h2, h3 {
     }
 
     .card-flow-image {
-        width: 35%;
+        width: 100%;
     }
 }
 
