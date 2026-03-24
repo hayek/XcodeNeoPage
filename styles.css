@@ -1056,9 +1056,17 @@ h1, h2, h3 {
 
 .projects-background {
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     padding: 0;
     aspect-ratio: 1924 / 784;
+}
+
+@media (max-width: 767px) {
+    .projects-background {
+        aspect-ratio: auto;
+        min-height: auto;
+        overflow: visible;
+    }
 }
 
 .projects-video {
@@ -1071,10 +1079,23 @@ h1, h2, h3 {
     z-index: 0;
 }
 
+@media (max-width: 767px) {
+    .projects-video {
+        position: relative;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 2122 / 1156;
+        object-fit: cover;
+    }
+}
+
 .projects-background .card-text-content {
     position: relative;
     z-index: 1;
     padding: 40px;
+    width: 100%;
+    height: auto;
+    align-items: flex-start;
 }
 
 .projects-background .card-title-text {
@@ -1082,8 +1103,29 @@ h1, h2, h3 {
 }
 
 @media (max-width: 767px) {
+    .projects-background .card-text-content {
+        padding: 24px;
+        width: 100%;
+        align-items: stretch;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-background .card-text-content {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 767px) {
     .card-layout-horizontal {
         flex-direction: column;
+    }
+
+    .card-layout-horizontal .card-text-content {
+        width: 100%;
+        padding-right: 0;
+        align-items: stretch;
+        margin-bottom: 20px;
     }
 
     .card-layout-horizontal .card-title-text {
@@ -1093,6 +1135,10 @@ h1, h2, h3 {
     }
 
     .card-layout-horizontal .card-screenshot-placeholder {
+        width: 100%;
+    }
+
+    .card-flow-image {
         width: 100%;
     }
 }
