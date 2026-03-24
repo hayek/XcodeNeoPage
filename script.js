@@ -197,3 +197,18 @@ if (projectsVideo) {
         }, TIMINGS.VIDEO_LOOP_DELAY);
     });
 }
+
+// Analytics: Download button clicks
+const downloadButtons = document.querySelectorAll('[href*="releases/download"]');
+downloadButtons.forEach((button, index) => {
+    let location = 'unknown';
+    if (button.closest('.navbar')) {
+        location = 'navbar';
+    } else if (button.closest('.cta-section')) {
+        location = 'cta';
+    }
+
+    button.addEventListener('click', () => {
+        logDownloadClick(location);
+    });
+});
