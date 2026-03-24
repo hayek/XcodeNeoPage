@@ -338,7 +338,7 @@ h1, h2, h3 {
 
 @media (max-width: 480px) {
     .navbar {
-        padding: 2px 12px;
+        display: none;
     }
 
     .navbar-content {
