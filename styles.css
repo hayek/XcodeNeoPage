@@ -1720,6 +1720,55 @@ h1, h2, h3 {
     }
 }
 
+/* Footnotes */
+.footnotes-section {
+    border-top: 1px solid var(--border-color, rgba(0, 0, 0, 0.1));
+    padding: 40px 20px 20px;
+}
+
+.footnotes {
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    opacity: 0.7;
+    line-height: 1.6;
+}
+
+.footnotes li {
+    margin-bottom: 8px;
+}
+
+.footnote-link {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footnote-link:hover {
+    opacity: 0.7;
+}
+
+@media (max-width: 767px) {
+    .footnotes-section {
+        padding: 30px 16px 15px;
+    }
+
+    .footnotes {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footnotes-section {
+        padding: 24px 16px 12px;
+    }
+
+    .footnotes {
+        font-size: 11px;
+    }
+}
+
 /* Footer */
 footer {
     text-align: center;
