@@ -1,13 +1,13 @@
 # "And Much More" Features Design
 **Date:** 2026-03-24
-**Project:** Xcode Neo Landing Page
+**Project:** Zcode Landing Page
 **Scope:** Replace and refine feature items in the "And much more" grid section
 
 ---
 
 ## Overview
 
-The "And much more" section of the Xcode Neo landing page showcases six key developer features. This design document specifies the final titles and copy for these features, replacing the current nine-item grid with six focused, high-impact items.
+The "And much more" section of the Zcode landing page showcases six key developer features. This design document specifies the final titles and copy for these features, replacing the current nine-item grid with six focused, high-impact items.
 
 ---
 

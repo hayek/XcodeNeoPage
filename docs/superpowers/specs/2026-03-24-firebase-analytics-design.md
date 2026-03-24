@@ -1,7 +1,7 @@
 # Firebase Analytics Integration Design
 
 **Date**: 2026-03-24
-**Project**: XcodeNeoPage
+**Project**: ZcodePage
 **Feature**: Firebase Analytics event tracking for user interactions
 
 ---
