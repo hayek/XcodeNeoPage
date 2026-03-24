@@ -87,9 +87,6 @@ export function logPageLoad() {
     theme_on_load: currentTheme
   });
 }
-
-// Log page load on module initialization
-logPageLoad();
 ```
 
 - [ ] **Step 2: Verify analytics.js is created in project root**
@@ -111,7 +108,7 @@ git commit -m "feat: add Firebase analytics module with event logging functions"
 **Files:**
 - Modify: `index.html:410`
 
-- [ ] **Step 1: Add Firebase SDK and analytics.js import before script.js**
+- [ ] **Step 1: Add analytics.js and convert script.js to module**
 
 In `index.html`, replace line 410:
 ```html
@@ -120,13 +117,11 @@ In `index.html`, replace line 410:
 
 With:
 ```html
-    <script type="module">
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-app.js";
-      import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-analytics.js";
-    </script>
     <script type="module" src="analytics.js"></script>
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 ```
+
+**Note**: Both scripts must be module scripts so that script.js can import functions from analytics.js. The Firebase SDK initialization is handled by analytics.js itself.
 
 - [ ] **Step 2: Verify index.html updated correctly**
 
@@ -151,8 +146,10 @@ git commit -m "feat: add Firebase scripts and analytics module import to HTML"
 
 Add to the top of `script.js` (after line 1):
 ```javascript
-import { logTabClick } from './analytics.js';
+import { logTabClick, logDownloadClick, logFAQInteraction, logExternalLinkClick, logThemeChange, logPageLoad } from './analytics.js';
 ```
+
+(All imports added at once to avoid multiple modifications)
 
 - [ ] **Step 2: Add analytics call to tab click handler**
 
@@ -188,14 +185,7 @@ git commit -m "feat: add analytics tracking for feature tab clicks"
 **Files:**
 - Modify: `script.js` (add new code after existing code)
 
-- [ ] **Step 1: Import logDownloadClick in analytics import**
-
-Modify the import line at top of script.js to:
-```javascript
-import { logTabClick, logDownloadClick } from './analytics.js';
-```
-
-- [ ] **Step 2: Add event listeners for download buttons**
+- [ ] **Step 1: Add event listeners for download buttons**
 
 Add this code at the end of `script.js` (after line 196):
 ```javascript
@@ -215,12 +205,12 @@ downloadButtons.forEach((button, index) => {
 });
 ```
 
-- [ ] **Step 3: Verify download tracking code added**
+- [ ] **Step 2: Verify download tracking code added**
 
 Run: `grep -n "logDownloadClick" script.js`
-Expected: Shows 2 lines (import and usage)
+Expected: Shows event listener code with logDownloadClick calls
 
-- [ ] **Step 4: Commit download analytics**
+- [ ] **Step 3: Commit download analytics**
 
 ```bash
 git add script.js
@@ -234,14 +224,7 @@ git commit -m "feat: add analytics tracking for download button clicks"
 **Files:**
 - Modify: `script.js:170-185`
 
-- [ ] **Step 1: Import logFAQInteraction**
-
-Update import line to:
-```javascript
-import { logTabClick, logDownloadClick, logFAQInteraction } from './analytics.js';
-```
-
-- [ ] **Step 2: Modify FAQ interaction handler**
+- [ ] **Step 1: Modify FAQ interaction handler**
 
 Replace the FAQ event listener section (lines 170-185) with:
 ```javascript
@@ -266,12 +249,12 @@ faqItems.forEach((item, index) => {
 });
 ```
 
-- [ ] **Step 3: Verify FAQ tracking integrated**
+- [ ] **Step 2: Verify FAQ tracking integrated**
 
 Run: `grep -n "logFAQInteraction" script.js`
-Expected: Shows import and 2 usage lines (opened and closed)
+Expected: Shows 2 usage lines (opened and closed)
 
-- [ ] **Step 4: Commit FAQ analytics**
+- [ ] **Step 3: Commit FAQ analytics**
 
 ```bash
 git add script.js
@@ -285,14 +268,7 @@ git commit -m "feat: add analytics tracking for FAQ open/close interactions"
 **Files:**
 - Modify: `script.js`
 
-- [ ] **Step 1: Import analytics functions**
-
-Update import to:
-```javascript
-import { logTabClick, logDownloadClick, logFAQInteraction, logExternalLinkClick, logThemeChange } from './analytics.js';
-```
-
-- [ ] **Step 2: Add analytics to theme button clicks**
+- [ ] **Step 1: Add analytics to theme button clicks**
 
 Modify the theme button event listener (lines 32-36) to:
 ```javascript
@@ -305,7 +281,7 @@ themeButtons.forEach(button => {
 });
 ```
 
-- [ ] **Step 3: Add event listeners for external links**
+- [ ] **Step 2: Add event listeners for external links**
 
 Add this code at the end of `script.js`:
 ```javascript
@@ -314,8 +290,7 @@ const externalLinks = {
     '.app-card-link': 'app_card',
     'a[href*="github.com"]': 'github',
     'a[href*="linkedin.com"]': 'linkedin',
-    'a[href*="mailto:"]': 'email',
-    '.navbar-link': 'navbar_link'
+    'a[href*="mailto:"]': 'email'
 };
 
 Object.entries(externalLinks).forEach(([selector, linkType]) => {
@@ -327,10 +302,22 @@ Object.entries(externalLinks).forEach(([selector, linkType]) => {
 });
 ```
 
+**Note**: Navbar links are internal anchors (#projects-card, #faq), not external links, so they are not tracked here.
+
+- [ ] **Step 3: Add page load event at end of script.js**
+
+Add to the very end of `script.js` (after all other code):
+```javascript
+// Analytics: Log page load with current theme
+logPageLoad();
+```
+
+This ensures the theme has been fully applied before logging the event.
+
 - [ ] **Step 4: Verify all imports and calls**
 
 Run: `grep -n "import.*from './analytics.js'" script.js`
-Expected: Shows complete import with all 5 functions
+Expected: Shows complete import with all 6 functions (including logPageLoad)
 
 - [ ] **Step 5: Commit theme and external link analytics**
 
