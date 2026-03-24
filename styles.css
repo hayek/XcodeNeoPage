@@ -222,6 +222,7 @@ h1, h2, h3 {
     height: 24px;
     border-radius: 6px;
     object-fit: contain;
+    margin-left: 8px;
 }
 
 .navbar-logo {
@@ -264,7 +265,7 @@ h1, h2, h3 {
     transition: opacity 0.2s ease;
     flex-shrink: 0;
     margin-left: auto;
-    padding-right: 5px;
+    padding: 0;
 }
 
 .navbar-download:hover {
