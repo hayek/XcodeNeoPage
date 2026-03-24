@@ -33,7 +33,9 @@ applyTheme(savedTheme);
 
 themeButtons.forEach(button => {
     button.addEventListener('click', () => {
-        applyTheme(button.dataset.theme);
+        const theme = button.dataset.theme;
+        logThemeChange(theme);  // Add this line
+        applyTheme(theme);
     });
 });
 
@@ -215,3 +217,22 @@ downloadButtons.forEach((button, index) => {
         logDownloadClick(location);
     });
 });
+
+// Analytics: External link clicks
+const externalLinks = {
+    '.app-card-link': 'app_card',
+    'a[href*="github.com"]': 'github',
+    'a[href*="linkedin.com"]': 'linkedin',
+    'a[href*="mailto:"]': 'email'
+};
+
+Object.entries(externalLinks).forEach(([selector, linkType]) => {
+    document.querySelectorAll(selector).forEach(link => {
+        link.addEventListener('click', () => {
+            logExternalLinkClick(linkType);
+        });
+    });
+});
+
+// Analytics: Log page load with current theme
+logPageLoad();
