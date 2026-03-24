@@ -845,6 +845,19 @@ h1, h2, h3 {
     aspect-ratio: 260 / 330;
 }
 
+@media (max-width: 767px) {
+    .mcp-image {
+        aspect-ratio: 1 / 1;
+        max-width: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mcp-image {
+        max-width: 80px;
+    }
+}
+
 .mcp-text {
     font-size: clamp(14px, 2vw, 16px);
     line-height: 1.6;
@@ -902,7 +915,7 @@ h1, h2, h3 {
 @media (max-width: 767px) {
     .mcp-flip-front,
     .mcp-flip-back {
-        flex-direction: row;
+        flex-direction: row-reverse;
         align-items: center;
         gap: 12px;
     }
