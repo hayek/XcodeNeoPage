@@ -310,7 +310,7 @@ h1, h2, h3 {
     }
 
     .navbar-center {
-        gap: 6px;
+        display: none;
     }
 
     .navbar-logo {
