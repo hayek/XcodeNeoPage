@@ -1,3 +1,5 @@
+import { logTabClick, logDownloadClick, logFAQInteraction, logExternalLinkClick, logThemeChange, logPageLoad } from './analytics.js';
+
 // Theme Switcher
 const themeButtons = document.querySelectorAll('.theme-button');
 const html = document.documentElement;
@@ -121,6 +123,8 @@ featureTabs.forEach(tab => {
     tab.addEventListener('click', () => {
         userInteracted = true;
         stopAutoRotate();
+        const feature = tab.dataset.feature;
+        logTabClick(feature);
         switchTab(tab);
     });
 });
