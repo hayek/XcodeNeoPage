@@ -25,11 +25,11 @@ XcodeNeoPage/
 ```
 
 ### Initialization Flow
-1. `index.html` loads Firebase SDK via CDN
-2. `analytics.js` imported before `script.js`
-3. `analytics.js` initializes Firebase app and analytics on load
-4. `analytics.js` automatically calls `logPageLoad()` to track initial theme
-5. `script.js` calls analytics functions at interaction points
+1. `index.html` loads both analytics.js and script.js as module scripts
+2. `analytics.js` initializes Firebase app and analytics, exports event logging functions
+3. `script.js` imports analytics functions and sets up event listeners
+4. `script.js` calls `logPageLoad()` at the end (after all theme setup is complete)
+5. All interactions trigger corresponding analytics function calls
 
 ---
 
@@ -117,8 +117,9 @@ XcodeNeoPage/
 |-----------|------|--------|---------|
 | `theme_on_load` | string | "light", "dark", "system" | "system" |
 
-**Trigger**: Page loads and analytics initializes
-**Implementation**: `analytics.js` calls `logPageLoad()` on script initialization
+**Trigger**: Page loads and all initialization is complete
+**Implementation**: `script.js` calls `logPageLoad()` at the end of the script, after all theme setup is finished
+**Timing**: Must be called after theme application to capture the actual theme state
 
 ---
 
@@ -135,7 +136,7 @@ XcodeNeoPage/
 // - logExternalLinkClick(linkType)
 // - logThemeChange(theme)
 // - logPageLoad()
-// Auto-call logPageLoad() on module load
+// Note: logPageLoad() is called from script.js at end of initialization to ensure theme is applied
 ```
 
 ### script.js Changes
