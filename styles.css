@@ -1065,10 +1065,10 @@ h1, h2, h3 {
 }
 
 .card-text-content {
-    width: 35%;
+    width: clamp(35%, calc(35% + (1200px - 100vw) / 720px * 30%), 65%);
     display: flex;
     align-items: flex-end;
-    padding-right: 20px;
+    padding-right: clamp(0px, calc(20px - (1200px - 100vw) / 720px * 20px), 20px);
 }
 
 .card-layout-horizontal .card-title-text {
@@ -1108,7 +1108,7 @@ h1, h2, h3 {
 .projects-background .card-text-content {
     position: relative;
     z-index: 1;
-    padding: 40px;
+    padding: clamp(15px, calc(40px - (1200px - 100vw) / 720px * 25px), 40px);
 }
 
 .projects-background .card-title-text {
@@ -1116,13 +1116,12 @@ h1, h2, h3 {
 }
 
 @media (max-width: 480px) {
-    .card-layout-horizontal {
-        gap: 16px;
+    .projects-background .card-title-text {
+        font-size: clamp(7px, calc(14px - (480px - 100vw) / 180px * 7px), 14px);
     }
 
-    .card-text-content {
-        width: 65%;
-        padding-right: 0;
+    .card-layout-horizontal {
+        gap: 16px;
     }
 
     .card-layout-horizontal .card-title-text {
