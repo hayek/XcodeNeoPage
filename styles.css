@@ -1093,12 +1093,11 @@ h1, h2, h3 {
 
 @media (max-width: 767px) {
     .card-layout-horizontal {
-        flex-direction: column-reverse;
-        gap: 0;
+        gap: 16px;
     }
 
     .card-text-content {
-        width: 100%;
+        width: 65%;
         padding-right: 0;
     }
 
@@ -1106,15 +1105,15 @@ h1, h2, h3 {
         width: 100%;
         padding-right: 0;
         margin-bottom: 0;
-        margin-top: 20px;
+        margin-top: 0;
     }
 
     .card-layout-horizontal .card-screenshot-placeholder {
-        width: 100%;
+        width: 35%;
     }
 
     .card-flow-image {
-        width: 100%;
+        width: 35%;
     }
 }
 
