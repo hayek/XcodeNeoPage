@@ -1087,16 +1087,6 @@ h1, h2, h3 {
     aspect-ratio: 2122 / 1156;
 }
 
-@media (max-width: 767px) {
-    .card-text-content {
-        width: 70%;
-    }
-
-    .card-flow-image {
-        width: 30%;
-    }
-}
-
 .projects-background {
     position: relative;
     overflow: hidden;
