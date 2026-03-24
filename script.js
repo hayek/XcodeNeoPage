@@ -1,26 +1,11 @@
-// Analytics - conditional import based on protocol
-// When opened locally (file://), use no-op stubs; on HTTP/HTTPS, load real analytics
-let logTabClick, logDownloadClick, logFAQInteraction, logExternalLinkClick, logThemeChange, logPageLoad;
-
-if (window.location.protocol === 'file:') {
-  // Local file testing - provide no-op stubs (analytics disabled)
-  logTabClick = () => {};
-  logDownloadClick = () => {};
-  logFAQInteraction = () => {};
-  logExternalLinkClick = () => {};
-  logThemeChange = () => {};
-  logPageLoad = () => {};
-  console.log('Analytics disabled (local file:// testing)');
-} else {
-  // HTTP/HTTPS - import actual Firebase analytics
-  const analytics = await import('./analytics.js');
-  logTabClick = analytics.logTabClick;
-  logDownloadClick = analytics.logDownloadClick;
-  logFAQInteraction = analytics.logFAQInteraction;
-  logExternalLinkClick = analytics.logExternalLinkClick;
-  logThemeChange = analytics.logThemeChange;
-  logPageLoad = analytics.logPageLoad;
-}
+// Analytics - Use global Analytics object (defined in analytics.js)
+// Works with both local file:// and HTTP/HTTPS
+const logTabClick = (name) => window.Analytics.logTabClick(name);
+const logDownloadClick = (loc) => window.Analytics.logDownloadClick(loc);
+const logFAQInteraction = (idx, action) => window.Analytics.logFAQInteraction(idx, action);
+const logExternalLinkClick = (type) => window.Analytics.logExternalLinkClick(type);
+const logThemeChange = (theme) => window.Analytics.logThemeChange(theme);
+const logPageLoad = () => window.Analytics.logPageLoad();
 
 // Theme Switcher
 const themeButtons = document.querySelectorAll('.theme-button');
