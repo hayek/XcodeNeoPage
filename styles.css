@@ -265,7 +265,9 @@ h1, h2, h3 {
     transition: opacity 0.2s ease;
     flex-shrink: 0;
     margin-left: auto;
-    padding: 0;
+    padding-right: 5px;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .navbar-download:hover {
