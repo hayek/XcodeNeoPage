@@ -909,7 +909,7 @@ h1, h2, h3 {
     .mcp-flip-front,
     .mcp-flip-back {
         flex-direction: row-reverse;
-        align-items: center;
+        align-items: flex-end;
         gap: 12px;
     }
 }
