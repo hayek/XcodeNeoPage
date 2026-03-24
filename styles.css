@@ -260,7 +260,7 @@ h1, h2, h3 {
     align-items: center;
     justify-content: center;
     width: 130px;
-    min-height: 44px;
+    min-height: 56px;
     cursor: pointer;
     transition: opacity 0.2s ease;
     flex-shrink: 0;
