@@ -1322,7 +1322,7 @@ h1, h2, h3 {
 .feature-card-with-text {
     min-height: auto;
     justify-content: flex-start;
-    gap: 20px;
+    gap: 15px;
 }
 
 .feature-card-text {
