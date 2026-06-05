@@ -69,7 +69,7 @@ let userInteracted = false;
 const featureContent = {
     ai: {
         title: 'Bring your own AI',
-        description: 'Connect Claude, your custom models, or any AI agent directly to your projects through MCP Server integration. Each project gets dedicated terminal tabs that auto-label from your commands. Let AI agents build, test, and run alongside you.'
+        description: 'Connect Claude, your custom models, or any AI agent directly to your projects through the Zcode Skill. Each project gets dedicated terminal tabs that auto-label from your commands. Let AI agents build, test, and run alongside you.'
     },
     timeline: {
         title: 'See your story unfold',

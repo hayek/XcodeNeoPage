@@ -40,7 +40,7 @@
                 <a href="#projects-card" class="navbar-link">Features</a>
                 <a href="#faq" class="navbar-link">FAQ</a>
             </div>
-            <a href="https://github.com/hayek/XcodeNeo-releases/releases/download/0.1.0/Zcode-0.1.0.dmg" class="navbar-download" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/hayek/Zcode-releases/releases/download/0.2.0/Zcode-0.2.0.dmg" class="navbar-download" target="_blank" rel="noopener noreferrer">
                 <svg viewBox="0 0 140 40" xmlns="http://www.w3.org/2000/svg">
                     <rect width="140" height="40" rx="20" fill="var(--primary-color)"/>
                     <text x="70" y="22" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="600" fill="var(--bg-color)" text-anchor="middle" dominant-baseline="middle">Download</text>
@@ -90,7 +90,7 @@
 
             <!-- Feature Description -->
             <div class="feature-description">
-                <p class="feature-description-text"><strong>Bring your own AI.</strong> Connect Claude, your custom models, or any AI agent directly to your projects through MCP Server integration. Each project gets dedicated terminal tabs that auto-label from your commands. Let AI agents build, test, and run alongside you.</p>
+                <p class="feature-description-text"><strong>Bring your own AI.</strong> Connect Claude, your custom models, or any AI agent directly to your projects through the Zcode Skill. Each project gets dedicated terminal tabs that auto-label from your commands. Let AI agents build, test, and run alongside you.</p>
             </div>
         </div>
     </section>
@@ -125,13 +125,13 @@
             <div class="card-row-mcp">
                 <div class="card mcp-card mcp-card-large">
                     <img src="Assets/ideAi.png" alt="IDE for the AI tool" class="image-card mcp-image-large">
-                    <p class="mcp-text"><strong>IDE for the AI tool.</strong> With the included Zcode MCP, AI agents can build, run and even inspect the console output. The AI can add logs, run, inspect logs, iterate on solution and loop until task is done.</p>
+                    <p class="mcp-text"><strong>IDE for the AI tool.</strong> With the included Zcode Skill, AI agents can build, run and even inspect the console output. The AI can add logs, run, inspect logs, iterate on solution and loop until task is done.</p>
                 </div>
                 <div class="card mcp-card mcp-card-small mcp-flip-card">
                     <div class="mcp-flip-container">
                         <div class="mcp-flip-front">
                             <div class="mcp-image-container">
-                                <img src="Assets/mcp-install.png" alt="One Click MCP installation" class="image-card mcp-image">
+                                <img src="Assets/mcp-install.png" alt="One Click Skill installation" class="image-card mcp-image">
                                 <button class="mcp-flip-button" aria-label="Toggle card">
                                     <svg viewBox="0 0 24 24" class="mcp-flip-icon" fill="currentColor">
                                         <rect x="11" y="5" width="2" height="14" rx="1"/>
@@ -139,7 +139,7 @@
                                     </svg>
                                 </button>
                             </div>
-                            <p class="mcp-text"><strong>One Click MCP installation<sup><a href="#footnote-1" class="footnote-link">1</a></sup>.</strong> No need to get lost in config json files.</p>
+                            <p class="mcp-text"><strong>One Click Skill installation<sup><a href="#footnote-1" class="footnote-link">1</a></sup>.</strong> No need to get lost in config json files.</p>
                         </div>
                         <div class="mcp-flip-back">
                             <button class="mcp-flip-button mcp-flip-button-back" aria-label="Toggle card">
@@ -157,7 +157,7 @@
                                 <line x1="4" y1="15" x2="2" y2="15"/>
                                 <line x1="22" y1="15" x2="20" y2="15"/>
                             </svg>
-                            <p class="mcp-text-back"><strong>Install the Zcode MCP with one click.</strong><br>MCP are installed per project so they dont take context space where you do not need it.</p>
+                            <p class="mcp-text-back"><strong>Install the Zcode Skill with one click.</strong><br>Skills are installed per project so they don't take context space where you do not need it.</p>
                         </div>
                     </div>
                 </div>
@@ -216,6 +216,18 @@
                     <h3 class="feature-item-title">Tests</h3>
                     <p class="feature-item-text">You and your AI see every test result. Debug and iterate together in real time</p>
                 </div>
+                <div class="feature-item">
+                    <h3 class="feature-item-title">Git Worktrees</h3>
+                    <p class="feature-item-text">Branches and worktrees of a repo group into one project—switch between them in a click</p>
+                </div>
+                <div class="feature-item">
+                    <h3 class="feature-item-title">Physical Devices</h3>
+                    <p class="feature-item-text">Build and run on real iPhones and iPads, not just the simulator</p>
+                </div>
+                <div class="feature-item">
+                    <h3 class="feature-item-title">Skill Marketplace</h3>
+                    <p class="feature-item-text">Browse and install AI skills per project, so context stays where you need it</p>
+                </div>
             </div>
         </div>
     </section>
@@ -259,10 +271,10 @@
         <div class="container">
             <div class="cta-content">
                 <h2 class="cta-headline">Ready to give it a try?</h2>
-                <a href="https://github.com/hayek/XcodeNeo-releases/releases/download/0.1.0/Zcode-0.1.0.dmg" class="cta-button" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/hayek/Zcode-releases/releases/download/0.2.0/Zcode-0.2.0.dmg" class="cta-button" target="_blank" rel="noopener noreferrer">
                     Download
                 </a>
-                <p class="cta-caption">version 0.1 beta, macOS Sequoia or newer</p>
+                <p class="cta-caption">version 0.2 beta, macOS Sequoia or newer</p>
             </div>
         </div>
     </section>
@@ -316,7 +328,7 @@
                     </summary>
                     <div class="faq-answer">
                         <div class="faq-answer-inner">
-                            <p>Yes, Zcode supports integrating your own AI models through the MCP (Model Context Protocol) system.</p>
+                            <p>Yes. Run Claude, your own models, or any AI agent right in Zcode's terminal, and install the Zcode Skill so your agent can build, run, and inspect your projects directly.</p>
                         </div>
                     </div>
                 </details>
@@ -364,7 +376,7 @@
     <section class="footnotes-section">
         <div class="container">
             <ol class="footnotes">
-                <li id="footnote-1">One Click MCP installation is supported on Claude Code CLI only.</li>
+                <li id="footnote-1">One Click Skill installation is supported on Claude Code CLI only.</li>
             </ol>
             <div style="margin-top: 20px; margin-bottom: 20px;">
                 <a href="privacy.html" target="_blank" rel="noopener noreferrer" style="display: block; font-size: 14px; color: var(--text-color); opacity: 0.7; text-decoration: none;">Privacy Policy</a>
