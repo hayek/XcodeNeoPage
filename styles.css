@@ -1184,6 +1184,25 @@ h1, h2, h3 {
     aspect-ratio: 2122 / 1156;
 }
 
+.skill-marketplace-image {
+    width: 65%;
+    aspect-ratio: 2000 / 1591;
+}
+
+@media (max-width: 480px) {
+    .card-layout-horizontal:has(.skill-marketplace-image) {
+        flex-direction: column-reverse;
+    }
+
+    .card-layout-horizontal:has(.skill-marketplace-image) .card-text-content {
+        width: 100%;
+    }
+
+    .skill-marketplace-image {
+        width: 100%;
+    }
+}
+
 .projects-background {
     position: relative;
     overflow: hidden;
