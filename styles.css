@@ -1499,45 +1499,54 @@ h1, h2, h3 {
     line-height: 1.5;
 }
 
-/* App Showcase Cards */
-.apps-scroll-container {
+/* App Showcase Cards: a full-width row that scrolls by itself. script.js repeats the cards
+   once so the loop is seamless; the track moves left by exactly one set. */
+.apps-marquee {
+    width: 100%;
+    overflow: hidden;
+    padding: 10px 0 30px;
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+}
+
+.apps-marquee-track {
     display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding-bottom: 10px;
-    -webkit-overflow-scrolling: touch;
-    scroll-behavior: smooth;
-    margin-bottom: 20px;
+    width: max-content;
+}
+
+.apps-marquee.is-looping .apps-marquee-track {
+    animation: apps-marquee var(--marquee-duration, 40s) linear infinite;
+}
+
+.apps-marquee:hover .apps-marquee-track,
+.apps-marquee:focus-within .apps-marquee-track {
+    animation-play-state: paused;
+}
+
+@keyframes apps-marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* Spacing as a margin, not a flex gap, so the two sets measure exactly half the track. */
+.apps-marquee .app-showcase-card {
+    margin: 0 20px 0 0;
 }
 
 @media (max-width: 480px) {
-    .apps-scroll-container {
-        gap: 12px;
-        padding-bottom: 8px;
-        margin-bottom: 16px;
+    .apps-marquee .app-showcase-card {
+        margin-right: 12px;
     }
 }
 
-.apps-scroll-container::-webkit-scrollbar {
-    height: 4px;
-}
-
-.apps-scroll-container::-webkit-scrollbar-track {
-    background: var(--bg-secondary);
-    border-radius: 10px;
-}
-
-.apps-scroll-container::-webkit-scrollbar-thumb {
-    background: var(--secondary-color);
-    border-radius: 10px;
-}
-
-.card-row-thirds {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-bottom: 20px;
+/* No motion: the row stays put and scrolls by hand instead. */
+@media (prefers-reduced-motion: reduce) {
+    .apps-marquee {
+        overflow-x: auto;
+        -webkit-mask-image: none;
+        mask-image: none;
+        padding-left: 20px;
+    }
 }
 
 .app-showcase-card {

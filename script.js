@@ -1,3 +1,23 @@
+// Apps row: repeat the cards once and loop the track by one set, at a steady speed whatever
+// the number of apps. Runs before the analytics wiring below so the copies are tracked too.
+const appsMarquee = document.querySelector('.apps-marquee');
+if (appsMarquee && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const track = appsMarquee.querySelector('.apps-marquee-track');
+    [...track.children].forEach(card => {
+        const copy = card.cloneNode(true);
+        copy.setAttribute('aria-hidden', 'true');
+        copy.setAttribute('tabindex', '-1');
+        track.appendChild(copy);
+    });
+    const PIXELS_PER_SECOND = 40;
+    const setDuration = () => {
+        track.style.setProperty('--marquee-duration', `${track.scrollWidth / 2 / PIXELS_PER_SECOND}s`);
+    };
+    setDuration();
+    window.addEventListener('resize', setDuration);
+    appsMarquee.classList.add('is-looping');
+}
+
 // Analytics - Use global Analytics object (defined in analytics.js)
 // Works with both local file:// and HTTP/HTTPS
 const logTabClick = (name) => window.Analytics.logTabClick(name);
