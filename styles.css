@@ -1184,6 +1184,26 @@ h1, h2, h3 {
     }
 }
 
+.scheduled-sessions-image {
+    width: 65%;
+    aspect-ratio: 1460 / 950;
+}
+
+@media (max-width: 480px) {
+    .card-layout-horizontal:has(.scheduled-sessions-image) {
+        flex-direction: column;
+    }
+
+    .card-layout-horizontal:has(.scheduled-sessions-image) .card-text-content {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .scheduled-sessions-image {
+        width: 100%;
+    }
+}
+
 .projects-background {
     position: relative;
     overflow: hidden;
