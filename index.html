@@ -37,6 +37,7 @@
                 <button class="navbar-logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Zcode</button>
             </div>
             <div class="navbar-center">
+                <a href="#ai" class="navbar-link">Agents</a>
                 <a href="#projects-card" class="navbar-link">Features</a>
                 <a href="#faq" class="navbar-link">FAQ</a>
             </div>
@@ -91,6 +92,70 @@
             <div class="feature-description">
                 <p class="feature-description-text"><strong>Bring your own AI.</strong> Connect Claude, your custom models, or any AI agent directly to your projects through the Zcode Skill. Each project gets dedicated terminal tabs that auto-label from your commands. Let AI agents build, test, and run alongside you.</p>
             </div>
+        </div>
+    </section>
+
+    <!-- AI Showcase: example prompts for the Zcode Skill + local API. Each prompt and its
+         detail share an index; script.js crossfades them and builds the pagination dots. -->
+    <section id="ai" class="ai-showcase" aria-roledescription="carousel" aria-labelledby="ai-title">
+        <div class="ai-container">
+            <h2 id="ai-title" class="ai-title">Just ask your agent.</h2>
+            <p class="ai-lead">With the Zcode Skill installed, Claude Code drives Zcode for you&mdash;building and testing, opening new sessions, scheduling work, and waking up when something happens.</p>
+
+            <div class="ai-stage">
+                <div class="ai-card">
+                    <div class="ai-card-header" aria-hidden="true">
+                        <span class="ai-window-dots"><i></i><i></i><i></i></span>
+                        <span class="ai-card-title">Claude Code &mdash; MyApp</span>
+                        <span class="ai-card-badge">Zcode Skill</span>
+                    </div>
+                    <div class="ai-stack ai-prompts">
+                        <p class="ai-prompt is-active">Use Zcode to <mark class="ai-k">build and run</mark> MyApp on the iPhone&nbsp;17 simulator, read the console, and keep fixing until it launches without errors.</p>
+                        <p class="ai-prompt">Use Zcode to <mark class="ai-k">open three new sessions</mark> in MyApp: one reviews the networking code, one writes tests for Checkout, and one updates the README.</p>
+                        <p class="ai-prompt">Use Zcode to start a session in the <mark class="ai-k">fix-crash worktree</mark> of MyApp that reproduces the launch crash, fixes it, and runs the tests.</p>
+                        <p class="ai-prompt">Use Zcode to <mark class="ai-k">schedule a session</mark> in MyApp tonight at 2&nbsp;AM that updates all Swift packages, runs the full test suite, and writes a report.</p>
+                        <p class="ai-prompt">Use Zcode to run a session in MyApp <mark class="ai-k">every Monday and Thursday</mark> at 9&nbsp;AM that summarizes the commits on main into STANDUP.md.</p>
+                        <p class="ai-prompt">Use Zcode to <mark class="ai-k">remind this session</mark> every Sunday morning to check the new TestFlight feedback and triage the crashes.</p>
+                        <p class="ai-prompt">Use Zcode to <mark class="ai-k">wake this session</mark> when App Review decides on MyApp&nbsp;2.1&mdash;and if it&rsquo;s rejected, read the notes and tell me what to fix.</p>
+                        <p class="ai-prompt">Use Zcode to start a session in MyApp that runs every UI test, and <mark class="ai-k">signal this session</mark> when it&rsquo;s done so you can fix whatever failed.</p>
+                        <p class="ai-prompt">Use Zcode so that <mark class="ai-k">whenever Sam texts me</mark> &ldquo;ship it&rdquo;, a new session in MyApp runs the release script and reports the result.</p>
+                    </div>
+                </div>
+
+                <div class="ai-stack ai-details">
+                    <div class="ai-detail is-active" data-title="Build and run">
+                        <p class="ai-desc"><strong>Your agent drives the whole loop.</strong> It picks the scheme and simulator, builds, reads errors and console output straight from Zcode, edits the code, and runs again&mdash;until the job is done.</p>
+                    </div>
+                    <div class="ai-detail" data-title="New sessions">
+                        <p class="ai-desc"><strong>Work in parallel, in real tabs.</strong> Zcode opens a terminal tab for each one under MyApp in the sidebar and starts Claude Code&mdash;or the agent you picked in Settings&mdash;with its task. Your own tab never moves.</p>
+                    </div>
+                    <div class="ai-detail" data-title="Worktrees">
+                        <p class="ai-desc"><strong>Every branch gets its own agent.</strong> Name a branch or worktree folder and the session opens under that worktree in the sidebar, building and testing its own checkout.</p>
+                    </div>
+                    <div class="ai-detail" data-title="Scheduled sessions">
+                        <p class="ai-desc"><strong>Work that starts while you sleep.</strong> The session waits under MyApp in the sidebar and starts right on time. Zcode closed? A notification starts it. Mac asleep? Zcode can wake it for the run.</p>
+                    </div>
+                    <div class="ai-detail" data-title="Repeating sessions">
+                        <p class="ai-desc"><strong>Daily, weekly or monthly.</strong> Each run opens a fresh tab with the same task. 9:00 stays 9:00 across daylight saving, and runs missed while the Mac was off happen once&mdash;not once per miss.</p>
+                    </div>
+                    <div class="ai-detail" data-title="Reminders">
+                        <p class="ai-desc"><strong>Come back to the same conversation.</strong> The task is delivered into this very session, only once the agent is idle and you haven&rsquo;t typed for a moment. Closed the tab? Zcode reopens it and resumes the conversation.</p>
+                    </div>
+                    <div class="ai-detail" data-title="Triggers: App Review">
+                        <p class="ai-desc"><strong>Wait on anything a command can check.</strong> Zcode runs the check on a schedule&mdash;App Store review with <code>asc</code>, a merged PR or a finished CI run with <code>gh</code>&mdash;and wakes the agent the moment the answer changes.</p>
+                    </div>
+                    <div class="ai-detail" data-title="Triggers: signals between sessions">
+                        <p class="ai-desc"><strong>Agents that hand off to each other.</strong> This session listens for a named signal; the test session sends it with a short report when it&rsquo;s done. Zcode hands the report over as data, never as instructions.</p>
+                    </div>
+                    <div class="ai-detail" data-title="Triggers: messages, mail, files and the web">
+                        <p class="ai-desc"><strong>Your phone, your inbox, your files, the web.</strong> Triggers also fire on a new text message or e-mail, a file landing in a folder, or a web page or JSON endpoint changing&mdash;once, or every time.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ai-dots" role="group" aria-label="Choose an example"></div>
+
+            <p class="ai-footnote">The Zcode Skill installs with one click for Claude Code<sup><a href="#footnote-1" class="footnote-link">1</a></sup>. Any agent that can run <code>curl</code> can use the same local API. <a href="#faq-skill">How it works&nbsp;&rarr;</a></p>
         </div>
     </section>
 
@@ -355,6 +420,90 @@
                     <div class="faq-answer">
                         <div class="faq-answer-inner">
                             <p>Yes. Run Claude, your own models, or any AI agent right in Zcode's terminal, and install the Zcode Skill so your agent can build, run, and inspect your projects directly.</p>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="faq-item" id="faq-skill">
+                    <summary class="faq-question">
+                        <span>What is the Zcode Skill?</span>
+                        <span class="faq-icon"></span>
+                    </summary>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>A skill file Zcode adds to your project that teaches Claude Code how to drive Zcode. Behind it is Zcode's local API: build, run, test, read errors and console output, pick schemes and simulators, manage Swift packages, open new agent sessions, schedule them, and set up triggers. Install it with one click in Settings &rsaquo; Integrations, or let Zcode add it whenever you open a project. It lives in each project, so it never takes up your agent's context anywhere else.</p>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>How do I ask my agent to use Zcode?</span>
+                        <span class="faq-icon"></span>
+                    </summary>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Just say it in plain words, and mention Zcode so the agent reaches for the skill: &ldquo;Use Zcode to open two new sessions in MyApp&hellip;&rdquo;, &ldquo;Use Zcode to schedule a session tomorrow at 9&hellip;&rdquo;, &ldquo;Use Zcode to wake this session when PR #42 is merged&hellip;&rdquo;. Every new session gets the whole task up front, since it can't see your conversation, and opens as a normal tab you can watch and type into.</p>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>What's the difference between a session, a scheduled session, a reminder and a trigger?</span>
+                        <span class="faq-icon"></span>
+                    </summary>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>A new session is a new terminal tab with an agent working on a task, right now. A scheduled session is the same tab, opened later&mdash;once, or every day, week or month. A reminder brings a task back to an existing session, so the same conversation picks up where it left off. A trigger waits for something to happen instead of a time, then either starts a new session or wakes an existing one&mdash;once, or every time it happens.</p>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>What can trigger a session?</span>
+                        <span class="faq-icon"></span>
+                    </summary>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>A signal from another session or script; a shell command that starts succeeding or prints something new, with ready-made checks for App Store review, merged pull requests and finished CI runs; a web page or JSON endpoint that changes or matches a condition; a new text message or e-mail; and files created, changed or deleted in a folder. A cooldown merges bursts into one run, and a trigger that fires too often pauses itself. Messages and Mail need Full Disk Access, which Zcode walks you through.</p>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>What happens if Zcode is closed or my Mac is asleep?</span>
+                        <span class="faq-icon"></span>
+                    </summary>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>If Zcode is closed when a scheduled session is due, a notification starts it with one click, and anything overdue starts the next time Zcode opens. In Settings &rsaquo; General &rsaquo; Automations you choose what sleep does: Zcode can resume runs the Mac interrupted by going to sleep, or keep the Mac awake for a run and wake it shortly before the next one. Triggers listen while Zcode is running with the project open; text messages, e-mails and file changes from the last day that arrived while it was closed fire once when it opens again.</p>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Can I see and change what my agent set up?</span>
+                        <span class="faq-icon"></span>
+                    </summary>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Yes. Everything appears under its project in the sidebar as an automation&mdash;or as a small badge on the session it belongs to. Select it to see when it runs next or what it last checked, then edit it, run it now, or delete it; triggers can also be paused and resumed. You can also create the same automations yourself: right-click New Terminal &rsaquo; New Automation&hellip;.</p>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Is the local API safe?</span>
+                        <span class="faq-icon"></span>
+                    </summary>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>The API only listens on your own Mac, never the network. It refuses requests coming from web pages, and every change must come from a client that identifies itself. Tokens for HTTP triggers are kept in your Keychain, never in a file. Anything an event brings in&mdash;a message, an e-mail, a web page&mdash;is handed to the agent clearly marked as data, so it isn't mistaken for your instructions.</p>
                         </div>
                     </div>
                 </details>
