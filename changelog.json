@@ -1,0 +1,854 @@
+{
+  "versions": [
+    {
+      "version": "0.46.1",
+      "date": "2026-11-25",
+      "entries": [
+        {
+          "kind": "fixed",
+          "text": "Check for Updates now explains when GitHub is temporarily limiting update checks from your network, and when to try again, instead of showing \"Invalid HTTP response (403)\"."
+        }
+      ]
+    },
+    {
+      "version": "0.46.0",
+      "date": "2026-11-25",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "Use several terminal agents side by side: enable any number in **Settings ▸ Integrations**, then right-click New Terminal to start a session in Claude Code, Codex, Antigravity, OpenCode, Cursor, your custom command or a plain terminal. Each project remembers its last pick, which Cmd+T opens."
+        }
+      ]
+    },
+    {
+      "version": "0.45.0",
+      "date": "2026-11-24",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "Right-click a session in the sidebar to **Mark as Unread** or **Mark as Read**."
+        },
+        {
+          "kind": "fixed",
+          "text": "Terminal fixes: held letter keys repeat, wide characters show correctly while you compose input, terminal modes survive a font change, and a few rare crashes are gone."
+        }
+      ]
+    },
+    {
+      "version": "0.44.0",
+      "date": "2026-11-19",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "Antigravity: choose Accept edits, Auto or Plan mode in Settings. Zcode now knows when an Antigravity session is working or idle, so reminders and triggers can deliver into it and a finished turn badges its tab."
+        },
+        {
+          "kind": "improved",
+          "text": "Codex options match codex-cli 0.158: YOLO uses the current flag, and a new **Auto-review** option is available."
+        },
+        {
+          "kind": "fixed",
+          "text": "Quitting an Antigravity or Cursor agent no longer posts a \"command finished\" notification."
+        }
+      ]
+    },
+    {
+      "version": "0.43.0",
+      "date": "2026-11-19",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "Choose what runs Zcode starts on its own do when your Mac sleeps, in **Settings ▸ General ▸ Automations**: continue a run that sleep interrupted once the Mac wakes (the default), or wake the Mac shortly before a scheduled run and keep it awake until the run ends."
+        },
+        {
+          "kind": "improved",
+          "text": "Scheduled sessions and triggers are now one **Automations** feature: selectable sidebar rows with a detail view, one edit sheet with an explicit Save, a shared context menu (Edit, Run Now, Pause/Resume, Delete) and an Automations section in Sessions."
+        }
+      ]
+    },
+    {
+      "version": "0.42.0",
+      "date": "2026-11-18",
+      "entries": [
+        {
+          "kind": "improved",
+          "text": "Scheduled sessions and triggers in the sidebar get a hover card showing when they run next or what they watch, their status, and the start of their task."
+        }
+      ]
+    },
+    {
+      "version": "0.41.0",
+      "date": "2026-11-18",
+      "entries": [
+        {
+          "kind": "improved",
+          "text": "A terminal tab's hover card lists its reminders and triggers, with their next run and status."
+        }
+      ]
+    },
+    {
+      "version": "0.40.0",
+      "date": "2026-11-17",
+      "entries": [
+        {
+          "kind": "improved",
+          "text": "Triggers can check as often or as rarely as you like: **Check every** takes any number of minutes, hours or days, up to 365 days."
+        },
+        {
+          "kind": "improved",
+          "text": "The trigger sheet shows when a trigger last checked and when it will check next."
+        },
+        {
+          "kind": "improved",
+          "text": "If a trigger's check fails (say the Mac just woke and isn't online yet), Zcode tries again within minutes instead of waiting the whole interval."
+        }
+      ]
+    },
+    {
+      "version": "0.39.0",
+      "date": "2026-11-17",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "**Triggers:** start an agent session, or continue one, when something happens, not just at a set time. A trigger can listen for a signal from another session or a local script, a command's result (like an App Store review finishing), a web page or JSON API value changing, a new SMS/iMessage or email, or a file appearing in a folder, and can fire once or keep listening until you pause it."
+        },
+        {
+          "kind": "new",
+          "text": "Create a trigger from New Terminal ▸ **New Trigger…**, or let your agent set it up through the Zcode API. Messages and Mail triggers need Full Disk Access."
+        },
+        {
+          "kind": "improved",
+          "text": "Zcode is about 30% smaller."
+        }
+      ]
+    },
+    {
+      "version": "0.38.0",
+      "date": "2026-11-17",
+      "entries": [
+        {
+          "kind": "improved",
+          "text": "Clicking a Zcode notification about a terminal session opens that session's tab (reopening it if it was closed), instead of only bringing Zcode forward."
+        }
+      ]
+    },
+    {
+      "version": "0.37.0",
+      "date": "2026-11-15",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "Agents can close terminal tabs through the Zcode API, so a session an agent opened can be cleaned up when its work is done. A closed tab stays in the project's session history, and a tab you're typing in is never closed out from under you."
+        }
+      ]
+    },
+    {
+      "version": "0.36.0",
+      "date": "2026-11-10",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "New Project creates Xcode 27.2's JSON project format (`project.xcproj`), matching what Xcode itself generates, and adds a Command Line Tool template."
+        },
+        {
+          "kind": "improved",
+          "text": "Projects created by Xcode 27.2 open, build and run in Zcode, including version and build-number editing."
+        },
+        {
+          "kind": "fixed",
+          "text": "Building a visionOS-only project works when no visionOS simulator is installed."
+        }
+      ]
+    },
+    {
+      "version": "0.35.0",
+      "date": "2026-11-05",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "Right-click a terminal tab in the sidebar to copy its name."
+        }
+      ]
+    },
+    {
+      "version": "0.34.0",
+      "date": "2026-11-05",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "Agents can start or schedule a session in a specific worktree by naming its branch or folder (the new `worktree` option of the Zcode API); the Zcode Skill explains it. Naming a worktree you hid from the sidebar shows it again."
+        }
+      ]
+    },
+    {
+      "version": "0.33.0",
+      "date": "2026-11-05",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "Right-click a worktree in the sidebar to copy its name or its branch name."
+        }
+      ]
+    },
+    {
+      "version": "0.32.0",
+      "date": "2026-11-05",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "**Worktrees in the sidebar:** a project with several git worktrees lists each one as its own row, with its branch, folder, Run button and its own terminal tabs, and each can be collapsed on its own. Worktrees an agent creates appear automatically."
+        },
+        {
+          "kind": "fixed",
+          "text": "Switching to another project no longer resets a project's worktree back to the main checkout; clicking the project returns to the worktree you were using."
+        },
+        {
+          "kind": "fixed",
+          "text": "A worktree you remove from the list now stays removed instead of coming back on the next git activity. Bring it back with the project's **Show Hidden Worktrees** menu."
+        }
+      ]
+    },
+    {
+      "version": "0.31.0",
+      "date": "2026-11-03",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "**Reminders on terminal tabs:** right-click a tab to send its agent a task once, daily, weekly or monthly, continuing that conversation when the agent is free or starting a new session. Reminders notify you even while Zcode is closed, never run twice, and keep their time of day across daylight-saving and time-zone changes."
+        },
+        {
+          "kind": "improved",
+          "text": "Scheduled sessions are listed at the top of the project's Sessions tab, with Run Now and Delete in their context menu."
+        }
+      ]
+    },
+    {
+      "version": "0.30.0",
+      "date": "2026-11-03",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "Agents can open new sessions: ask an AI session to \"do this in a new tab called fix\" or \"start 3 sessions to review this\", and the tabs appear in your project."
+        },
+        {
+          "kind": "new",
+          "text": "Scheduled sessions: right-click New Terminal ▸ **Schedule Session…** to start an agent session at a set date and time. If Zcode is closed, a notification brings it back and starts the session."
+        },
+        {
+          "kind": "improved",
+          "text": "Restored tabs resume the agent and conversation they last ran."
+        },
+        {
+          "kind": "improved",
+          "text": "The local API now only accepts connections from your own Mac and refuses requests from web browsers."
+        }
+      ]
+    },
+    {
+      "version": "0.29.0",
+      "date": "2026-11-02",
+      "entries": [
+        {
+          "kind": "improved",
+          "text": "Updated terminal engine: faster search, selection and link detection in long wrapped output, Terminal.app-style smart selection, and safer link opening (scripts and apps are never launched from a clicked link, and custom link types ask first)."
+        }
+      ]
+    },
+    {
+      "version": "0.28.0",
+      "date": "2026-10-27",
+      "entries": [
+        {
+          "kind": "improved",
+          "text": "Updated terminal engine; Option+←/→ word jumps are now handled by the terminal itself."
+        }
+      ]
+    },
+    {
+      "version": "0.27.0",
+      "date": "2026-10-18",
+      "entries": [
+        {
+          "kind": "fixed",
+          "text": "File paths that Claude Code wraps across lines can be opened again after it redraws the screen, without resizing the window first."
+        }
+      ]
+    },
+    {
+      "version": "0.26.0",
+      "date": "2026-10-15",
+      "entries": [
+        {
+          "kind": "improved",
+          "text": "The hover card's terminal preview wraps long lines and shows more of the screen, so an agent's recap is readable."
+        }
+      ]
+    },
+    {
+      "version": "0.25.0",
+      "date": "2026-10-14",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "A terminal tab's hover card in the sidebar previews the last lines on its screen."
+        },
+        {
+          "kind": "fixed",
+          "text": "Idle Claude sessions no longer look recently used when Claude Code updates itself in the background, so they are auto-closed on schedule."
+        }
+      ]
+    },
+    {
+      "version": "0.24.0",
+      "date": "2026-10-11",
+      "entries": [
+        {
+          "kind": "improved",
+          "text": "Stability and reliability improvements."
+        }
+      ]
+    },
+    {
+      "version": "0.23.0",
+      "date": "2026-10-11",
+      "entries": [
+        {
+          "kind": "improved",
+          "text": "**Faster session info cards:** once a session's info card is showing, hovering another session in the sidebar shows its card immediately."
+        }
+      ]
+    },
+    {
+      "version": "0.22.0",
+      "date": "2026-10-11",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "**See Claude subagents in the sidebar:** terminal rows running Claude Code show a badge counting the subagents the session is running, with no hooks needed."
+        },
+        {
+          "kind": "new",
+          "text": "**Session info card:** hover a sidebar session for a moment to see its full title, status, directory, program, running commands, subagents and session ID."
+        }
+      ]
+    },
+    {
+      "version": "0.21.0",
+      "date": "2026-10-11",
+      "entries": [
+        {
+          "kind": "improved",
+          "text": "**Check for Updates moved:** it now lives in the Zcode menu, under About Zcode."
+        },
+        {
+          "kind": "fixed",
+          "text": "**Session times are accurate again:** sidebar sessions running Claude Code (native install) no longer all read \"now\", get re-stamped together, or show the same last-used time after a relaunch, and idle ones are auto-closed as configured."
+        }
+      ]
+    },
+    {
+      "version": "0.20.0",
+      "date": "2026-10-11",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "**See what each terminal is running:** sidebar terminal rows show the program in the foreground (claude, xcodebuild, npm, nvim…) and a badge counting the commands running alongside it, such as Claude Code's tool shells and background jobs. Hover the badge to see the commands."
+        }
+      ]
+    },
+    {
+      "version": "0.19.0",
+      "date": "2026-10-11",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "**Agent notifications from any CLI:** notifications that agents send through the terminal (iTerm2, kitty and Ghostty styles) become macOS notifications and tab badges, not just Claude Code's. The \"command finished\" notification for commands that run 5 seconds or more now fires (editors, ssh and agent CLIs are skipped)."
+        },
+        {
+          "kind": "new",
+          "text": "**Status and progress in the sidebar:** terminal tabs show a progress ring while a program reports progress, and an orange \"needs you\", red \"failed\" or green \"done\" mark when a program reports its status."
+        },
+        {
+          "kind": "new",
+          "text": "**Jump between prompts:** Cmd+↑ / Cmd+↓ scroll to the previous / next shell prompt in new terminal tabs."
+        },
+        {
+          "kind": "improved",
+          "text": "**Faster terminal engine:** output is parsed off the main thread, for smoother scrolling and typing while agents stream output."
+        },
+        {
+          "kind": "improved",
+          "text": "**Find bar counter:** terminal search shows the current match and the total, e.g. \"2/14\"."
+        },
+        {
+          "kind": "improved",
+          "text": "**Light/dark follows Zcode:** programs like Neovim re-theme when the terminal palette switches."
+        },
+        {
+          "kind": "fixed",
+          "text": "Closing a tab ends its shell cleanly (history saved, jobs hung up), and dropped files paste as text."
+        },
+        {
+          "kind": "fixed",
+          "text": "Option+←/→ move by word and Shift+Enter inserts a newline in Claude Code; the scroll bar follows the system \"Show scroll bars\" setting."
+        },
+        {
+          "kind": "fixed",
+          "text": "Cmd-hold badges and Cmd+click line up correctly on lines with emoji or CJK text."
+        }
+      ]
+    },
+    {
+      "version": "0.18.0",
+      "date": "2026-10-04",
+      "entries": [
+        {
+          "kind": "fixed",
+          "text": "**Links open correctly from Claude Code output:** Cmd-clicking a link (or using its Cmd-hold badge) no longer drags the following words into the URL, so a link followed by text such as \"(private until you share it…)\" no longer opens as a broken address."
+        }
+      ]
+    },
+    {
+      "version": "0.17.0",
+      "date": "2026-10-03",
+      "entries": [
+        {
+          "kind": "improved",
+          "text": "**Clickable wrapped paths:** file paths that Claude Code and other agent CLIs wrap onto the next line in the terminal are recognized as one path. Cmd-hold badges, Cmd+click to open and Cmd+Option+click to copy all work from either half, so you no longer need to widen the window to open them."
+        }
+      ]
+    },
+    {
+      "version": "0.16.0",
+      "date": "2026-10-02",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "**jj (Jujutsu) support:** Zcode understands jj repos alongside git. The toolbar shows the current bookmark or change ID, the Changes tab lists jj changes and diffs, and jj workspaces are grouped in the sidebar like git worktrees. New workspaces appear automatically."
+        },
+        {
+          "kind": "improved",
+          "text": "**Hands-off in jj repos:** version control stays with your agent. Git actions (commit, push, pull, stash, branch switching) are hidden for jj repos, and the Zcode skill tells the agent to use jj."
+        },
+        {
+          "kind": "improved",
+          "text": "**Clean jj history:** Zcode's own skill and hook files are kept out of jj changes."
+        }
+      ]
+    },
+    {
+      "version": "0.15.0",
+      "date": "2026-10-02",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "**Sessions history:** a new Sessions tab in the console lists every terminal session a project has had, with last-used times. Reopen or swipe to delete any of them."
+        },
+        {
+          "kind": "new",
+          "text": "**Idle cleanup:** sidebar sessions left unused for a while (2 days by default) now close automatically."
+        },
+        {
+          "kind": "fixed",
+          "text": "Devices that are paired or connected after a project loads now appear in the destination picker."
+        }
+      ]
+    },
+    {
+      "version": "0.14.1",
+      "date": "2026-09-26",
+      "entries": [
+        {
+          "kind": "fixed",
+          "text": "Fixes a crash at launch when a project in the sidebar uses an Icon Composer (`.icon`) app icon."
+        }
+      ]
+    },
+    {
+      "version": "0.14.0",
+      "date": "2026-09-25",
+      "entries": [
+        {
+          "kind": "improved",
+          "text": "The update window shows which version you're updating to."
+        },
+        {
+          "kind": "fixed",
+          "text": "**Update & Relaunch** no longer leaves the old version running."
+        },
+        {
+          "kind": "fixed",
+          "text": "Updating no longer turns off **Ask before quitting**."
+        }
+      ]
+    },
+    {
+      "version": "0.13.0",
+      "date": "2026-09-25",
+      "entries": [
+        {
+          "kind": "improved",
+          "text": "Send Feedback has a new feedback window."
+        }
+      ]
+    },
+    {
+      "version": "0.12.2",
+      "date": "2026-09-25",
+      "entries": [
+        {
+          "kind": "fixed",
+          "text": "Check for Updates no longer says \"Couldn't Check for Updates\" when you're already up to date."
+        }
+      ]
+    },
+    {
+      "version": "0.12.1",
+      "date": "2026-09-25",
+      "entries": [
+        {
+          "kind": "fixed",
+          "text": "Check for Updates no longer crashes the app when you're already up to date."
+        }
+      ]
+    },
+    {
+      "version": "0.12.0",
+      "date": "2026-09-25",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "**Help ▸ Check for Updates…**"
+        },
+        {
+          "kind": "fixed",
+          "text": "Check for Updates in Settings and About reports whether you're up to date or the check failed."
+        }
+      ]
+    },
+    {
+      "version": "0.11.0",
+      "date": "2026-09-17",
+      "entries": [
+        {
+          "kind": "fixed",
+          "text": "**Running on a simulator works with Xcode 27.** Xcode 27 replaced the Simulator app with Device Hub, so Zcode ran your app without showing a simulator window. Zcode now opens Device Hub on Xcode 27 and the Simulator app on Xcode 26 and earlier."
+        },
+        {
+          "kind": "fixed",
+          "text": "**The simulator you picked is the one that's shown.** Running or booting a simulator opens Device Hub (or Simulator) on that device, instead of whichever device it showed last."
+        }
+      ]
+    },
+    {
+      "version": "0.10.0",
+      "date": "2026-09-17",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "**visionOS project template.** New projects can target visionOS, with the right SDK, platforms and device family set up for you."
+        },
+        {
+          "kind": "new",
+          "text": "**Project names with spaces, dashes or a leading digit** now produce a project that builds: the generated App type gets a valid Swift name."
+        },
+        {
+          "kind": "new",
+          "text": "Refreshed iOS and command-line templates, with shared schemes included."
+        },
+        {
+          "kind": "fixed",
+          "text": "**The Add Project button stays readable.** Sidebar rows no longer show through it when you scroll a long project list."
+        }
+      ]
+    },
+    {
+      "version": "0.9.0",
+      "date": "2026-09-15",
+      "entries": [
+        {
+          "kind": "improved",
+          "text": "Zcode's background git refreshes no longer rewrite your repository's index."
+        },
+        {
+          "kind": "fixed",
+          "text": "**Projects no longer deselect themselves.** A project whose Xcode project lives in a subfolder of its git repo (for example `MyRepo/ios/MyApp.xcodeproj`, common in Flutter, React Native and monorepos) now stays selected instead of closing right after you select it."
+        },
+        {
+          "kind": "fixed",
+          "text": "**Branch switches keep your projects.** Checking out a branch that doesn't contain a project's folder no longer removes that project from the sidebar."
+        },
+        {
+          "kind": "fixed",
+          "text": "**Feedback submissions work again.** The Send Feedback window has been rebuilt; reports were failing to send in earlier versions."
+        },
+        {
+          "kind": "fixed",
+          "text": "**Terminal tabs keep their names** across relaunches."
+        }
+      ]
+    },
+    {
+      "version": "0.8.0",
+      "date": "2026-09-03",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "**Terminal search**: find text in the terminal, with every match highlighted so you can see them all at once."
+        },
+        {
+          "kind": "improved",
+          "text": "**Apple silicon build**: Zcode now ships arm64-only, for a smaller download."
+        },
+        {
+          "kind": "improved",
+          "text": "Updated terminal emulator engine."
+        },
+        {
+          "kind": "fixed",
+          "text": "Builds no longer stall on package-plugin validation."
+        }
+      ]
+    },
+    {
+      "version": "0.7.1",
+      "date": "2026-08-27",
+      "entries": [
+        {
+          "kind": "improved",
+          "text": "**Fifteen terminal path badges instead of six**, using the digits 1–9 alongside the safe letters."
+        },
+        {
+          "kind": "fixed",
+          "text": "**Terminal path badges work.** Badges use only keys nothing else claims, so a badge no longer loses its keypress to the find bar, and Build, Run, Test and Find stay reachable while badges are up."
+        },
+        {
+          "kind": "fixed",
+          "text": "**Fixed a race that silently truncated git output**, which could make a repo's sibling worktrees vanish from the sidebar or the branch list come back empty."
+        }
+      ]
+    },
+    {
+      "version": "0.7.0",
+      "date": "2026-08-24",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "**Open file paths straight from the terminal.** Cmd+click any path in terminal output to open it; hold Cmd to reveal lettered badges and jump to a path from the keyboard, without reaching for the mouse."
+        },
+        {
+          "kind": "improved",
+          "text": "**Every local API request names the project it acts on** (`?project=`, a `project` field, or `X-Zcode-Project`). API calls no longer move the selection in the app, so several agents can each drive their own project at once."
+        },
+        {
+          "kind": "fixed",
+          "text": "**Selections survive streaming output.** A selection you drag out while an agent redraws a spinner now stays put so you can copy it."
+        }
+      ]
+    },
+    {
+      "version": "0.6.0",
+      "date": "2026-08-19",
+      "entries": [
+        {
+          "kind": "improved",
+          "text": "When analytics is turned on in Settings, Zcode also sends crash reports so crashes get fixed faster. The privacy policy explains what is collected."
+        },
+        {
+          "kind": "fixed",
+          "text": "The terminal no longer misses the exit of very short-lived commands or shows stale lines when it repaints while scrolled back."
+        }
+      ]
+    },
+    {
+      "version": "0.5.0",
+      "date": "2026-08-04",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "Choose the terminal cursor's shape (block, underline or bar) and whether it blinks, in **Settings ▸ Appearance**. Programs that set their own cursor, like Neovim, still can."
+        },
+        {
+          "kind": "fixed",
+          "text": "Terminal tabs and agent sessions survive a crash or force quit instead of being lost."
+        },
+        {
+          "kind": "fixed",
+          "text": "Clicking an unfocused terminal focuses it again."
+        },
+        {
+          "kind": "fixed",
+          "text": "Zcode no longer slows down and uses a full CPU core after running for hours while an app or a build streams output."
+        },
+        {
+          "kind": "fixed",
+          "text": "Git worktrees stay grouped correctly after a relaunch, in projects that live in a subfolder of the repo, and when git can't be reached."
+        },
+        {
+          "kind": "fixed",
+          "text": "A lid-closed Prevent Sleep session is no longer cut short when its background helper restarts."
+        }
+      ]
+    },
+    {
+      "version": "0.4.0",
+      "date": "2026-07-26",
+      "entries": [
+        {
+          "kind": "improved",
+          "text": "Terminal rendering now runs on the GPU, cutting CPU use during heavy output."
+        },
+        {
+          "kind": "improved",
+          "text": "The terminal cursor no longer blinks."
+        }
+      ]
+    },
+    {
+      "version": "0.3.6",
+      "date": "2026-07-18",
+      "entries": [
+        {
+          "kind": "improved",
+          "text": "**Product ▸ Prevent Sleep** has a clearer layout: **Caffeinate ▸** picks how long to stay awake (**Off**, **Indefinitely**, or **15 minutes to 2 hours**), and **Caffeinate with Lid Closed** is a checkbox that keeps the Mac running with the lid shut for the same duration."
+        },
+        {
+          "kind": "improved",
+          "text": "Quitting Zcode now turns Prevent Sleep off in every mode, and the lid-closed helper is more robust: clean shutdown, crash recovery, and it updates itself with the app."
+        },
+        {
+          "kind": "fixed",
+          "text": "Installed terminal agents are detected more reliably, and resuming a previous agent session works for tabs that changed directory or predate agent tracking."
+        }
+      ]
+    },
+    {
+      "version": "0.3.5",
+      "date": "2026-07-13",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "**Product ▸ Prevent Sleep** has three modes, so a long build, test run or archive can outlast your Mac's sleep timer: **Off**, **Caffeinate** (keeps the Mac awake while the lid is open, also on battery) and **Caffeinate with Lid Closed** (keeps it running with the lid shut, for 15 minutes up to 2 hours)."
+        },
+        {
+          "kind": "new",
+          "text": "Lid-closed mode uses a small background helper that you approve once in **System Settings ▸ General ▸ Login Items & Extensions**. It is always time-boxed and the helper owns the deadline, so normal sleep returns when the timer ends, when you quit Zcode, and even after a crash or restart. A closed Mac that keeps running has less airflow: keep it plugged in and on a hard surface, not in a bag."
+        },
+        {
+          "kind": "new",
+          "text": "New **Help ▸ FAQ** entries explain Prevent Sleep."
+        }
+      ]
+    },
+    {
+      "version": "0.3.2",
+      "date": "2026-07-12",
+      "entries": [
+        {
+          "kind": "fixed",
+          "text": "The download page on zcodeapp.com now shows the current version automatically and states the real requirement, **macOS Tahoe 26.2 or newer**, instead of macOS Sequoia, which was never supported."
+        }
+      ]
+    },
+    {
+      "version": "0.3.1",
+      "date": "2026-07-12",
+      "entries": [
+        {
+          "kind": "fixed",
+          "text": "**Shift+Enter now inserts a newline in the terminal** instead of submitting, so agent CLIs like Claude Code that use it for multi-line input work as expected."
+        }
+      ]
+    },
+    {
+      "version": "0.3.0",
+      "date": "2026-07-12",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "Builds and tests that an agent starts through the local API no longer post notifications, so agent-run builds stay quiet."
+        },
+        {
+          "kind": "improved",
+          "text": "Updated terminal engine with rendering, scrolling and memory-leak fixes."
+        },
+        {
+          "kind": "fixed",
+          "text": "Build tasks no longer wait for the launch grace period before completing."
+        },
+        {
+          "kind": "fixed",
+          "text": "Running on an iOS Simulator installs the correct simulator build."
+        },
+        {
+          "kind": "fixed",
+          "text": "Booted simulators are no longer mistaken for physical devices with Xcode 26."
+        },
+        {
+          "kind": "fixed",
+          "text": "Switching schemes through the local API reloads destinations, as it does in the app."
+        }
+      ]
+    },
+    {
+      "version": "0.2.0",
+      "date": "2026-06-05",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "**Product ▸ Prevent Sleep** keeps your Mac awake during long builds."
+        },
+        {
+          "kind": "new",
+          "text": "Git worktrees of one repository are grouped into a single sidebar row, and switching to a branch that another worktree has checked out takes you to that worktree."
+        },
+        {
+          "kind": "new",
+          "text": "The Zcode Skill: Zcode installs a skill that teaches Claude Code to build, run and test through Zcode's local API (replacing the MCP server), and a skill marketplace powered by skills.sh lets you browse and install more."
+        },
+        {
+          "kind": "new",
+          "text": "When a Claude Code session finishes, its terminal tab gets a badge and you get a notification; the Dock icon counts the tabs waiting for you."
+        },
+        {
+          "kind": "new",
+          "text": "Run apps on physical iOS devices."
+        },
+        {
+          "kind": "improved",
+          "text": "A new project opens with a terminal tab ready, the tab menu adds **Close Other Tabs**, and Zcode offers to install the Metal Toolchain when a build needs it."
+        }
+      ]
+    },
+    {
+      "version": "0.1.0",
+      "date": "2026-03-25",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "First public beta of Zcode: open your Xcode projects in a simple, Xcode-like window, pick a scheme and a destination, and build, run and test on simulators and your Mac."
+        },
+        {
+          "kind": "new",
+          "text": "Every build and test run lands in a timeline with structured, searchable console logs, its issues and a one-click replay."
+        },
+        {
+          "kind": "new",
+          "text": "A built-in terminal with tabs for each project, color themes, and optional auto-launch of Claude Code or another agent CLI that resumes its previous session."
+        },
+        {
+          "kind": "new",
+          "text": "Source control in the app: review changes and diffs, stage files, commit with a message suggested by Apple Intelligence, and switch branches."
+        },
+        {
+          "kind": "new",
+          "text": "Create new projects from iOS, macOS and command-line templates, and manage Swift package dependencies."
+        },
+        {
+          "kind": "new",
+          "text": "AI agents can build, run and test your project through Zcode's built-in MCP server."
+        }
+      ]
+    }
+  ]
+}
