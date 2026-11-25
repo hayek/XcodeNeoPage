@@ -1,6 +1,24 @@
 {
   "versions": [
     {
+      "version": "0.48.0",
+      "date": "2026-11-25",
+      "entries": [
+        {
+          "kind": "improved",
+          "text": "A reminder or trigger that continues an Antigravity (`agy`) session now resumes that session's own conversation with the task, instead of starting a new one."
+        },
+        {
+          "kind": "improved",
+          "text": "Antigravity (`agy`) sessions in the sidebar are now named after their conversation's title, like Claude Code sessions, instead of \"Terminal 7\"."
+        },
+        {
+          "kind": "fixed",
+          "text": "Every Antigravity (`agy`) session now resumes its own conversation when Zcode reopens it, instead of only the most recent one picking up where it left off and the others starting over."
+        }
+      ]
+    },
+    {
       "version": "0.47.0",
       "date": "2026-11-25",
       "entries": [
