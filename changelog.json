@@ -301,12 +301,7 @@
     {
       "version": "0.24.0",
       "date": "2026-10-11",
-      "entries": [
-        {
-          "kind": "improved",
-          "text": "Stability and reliability improvements."
-        }
-      ]
+      "entries": []
     },
     {
       "version": "0.23.0",
@@ -374,7 +369,7 @@
         },
         {
           "kind": "improved",
-          "text": "**Faster terminal engine:** output is parsed off the main thread, for smoother scrolling and typing while agents stream output."
+          "text": "**Faster terminal engine:** scrolling and typing stay smooth while agents stream a lot of output."
         },
         {
           "kind": "improved",
@@ -518,7 +513,7 @@
       "entries": [
         {
           "kind": "new",
-          "text": "**Help ▸ Check for Updates…**"
+          "text": "**Check for Updates** is now in the Help menu."
         },
         {
           "kind": "fixed",
@@ -550,11 +545,11 @@
         },
         {
           "kind": "new",
-          "text": "**Project names with spaces, dashes or a leading digit** now produce a project that builds: the generated App type gets a valid Swift name."
+          "text": "Refreshed iOS and command-line templates, with shared schemes included."
         },
         {
-          "kind": "new",
-          "text": "Refreshed iOS and command-line templates, with shared schemes included."
+          "kind": "fixed",
+          "text": "**Project names with spaces, dashes or a leading digit** now produce a project that builds: the generated App type gets a valid Swift name."
         },
         {
           "kind": "fixed",
@@ -624,7 +619,7 @@
         },
         {
           "kind": "fixed",
-          "text": "**Fixed a race that silently truncated git output**, which could make a repo's sibling worktrees vanish from the sidebar or the branch list come back empty."
+          "text": "**Worktrees and branches no longer go missing:** a repo's sibling worktrees could vanish from the sidebar, or the branch list come back empty."
         }
       ]
     },
@@ -743,12 +738,7 @@
     {
       "version": "0.3.2",
       "date": "2026-07-12",
-      "entries": [
-        {
-          "kind": "fixed",
-          "text": "The download page on zcodeapp.com now shows the current version automatically and states the real requirement, **macOS Tahoe 26.2 or newer**, instead of macOS Sequoia, which was never supported."
-        }
-      ]
+      "entries": []
     },
     {
       "version": "0.3.1",
@@ -765,7 +755,7 @@
       "date": "2026-07-12",
       "entries": [
         {
-          "kind": "new",
+          "kind": "improved",
           "text": "Builds and tests that an agent starts through the local API no longer post notifications, so agent-run builds stay quiet."
         },
         {

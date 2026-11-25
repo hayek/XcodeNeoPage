@@ -289,10 +289,7 @@
 </section>
 <section id="v0.24.0">
 <h2><a href="#v0.24.0">0.24.0</a> <time datetime="2026-10-11">October 11, 2026</time></h2>
-<h3 class="kind-improved">Improved</h3>
-<ul>
-<li>Stability and reliability improvements.</li>
-</ul>
+<p>Maintenance release with no user-visible changes.</p>
 </section>
 <section id="v0.23.0">
 <h2><a href="#v0.23.0">0.23.0</a> <time datetime="2026-10-11">October 11, 2026</time></h2>
@@ -337,7 +334,7 @@
 </ul>
 <h3 class="kind-improved">Improved</h3>
 <ul>
-<li><strong>Faster terminal engine:</strong> output is parsed off the main thread, for smoother scrolling and typing while agents stream output.</li>
+<li><strong>Faster terminal engine:</strong> scrolling and typing stay smooth while agents stream a lot of output.</li>
 <li><strong>Find bar counter:</strong> terminal search shows the current match and the total, e.g. &quot;2/14&quot;.</li>
 <li><strong>Light/dark follows Zcode:</strong> programs like Neovim re-theme when the terminal palette switches.</li>
 </ul>
@@ -430,7 +427,7 @@
 <h2><a href="#v0.12.0">0.12.0</a> <time datetime="2026-09-25">September 25, 2026</time></h2>
 <h3 class="kind-new">New</h3>
 <ul>
-<li><strong>Help ▸ Check for Updates…</strong></li>
+<li><strong>Check for Updates</strong> is now in the Help menu.</li>
 </ul>
 <h3 class="kind-fixed">Fixed</h3>
 <ul>
@@ -450,11 +447,11 @@
 <h3 class="kind-new">New</h3>
 <ul>
 <li><strong>visionOS project template.</strong> New projects can target visionOS, with the right SDK, platforms and device family set up for you.</li>
-<li><strong>Project names with spaces, dashes or a leading digit</strong> now produce a project that builds: the generated App type gets a valid Swift name.</li>
 <li>Refreshed iOS and command-line templates, with shared schemes included.</li>
 </ul>
 <h3 class="kind-fixed">Fixed</h3>
 <ul>
+<li><strong>Project names with spaces, dashes or a leading digit</strong> now produce a project that builds: the generated App type gets a valid Swift name.</li>
 <li><strong>The Add Project button stays readable.</strong> Sidebar rows no longer show through it when you scroll a long project list.</li>
 </ul>
 </section>
@@ -497,7 +494,7 @@
 <h3 class="kind-fixed">Fixed</h3>
 <ul>
 <li><strong>Terminal path badges work.</strong> Badges use only keys nothing else claims, so a badge no longer loses its keypress to the find bar, and Build, Run, Test and Find stay reachable while badges are up.</li>
-<li><strong>Fixed a race that silently truncated git output</strong>, which could make a repo&#x27;s sibling worktrees vanish from the sidebar or the branch list come back empty.</li>
+<li><strong>Worktrees and branches no longer go missing:</strong> a repo&#x27;s sibling worktrees could vanish from the sidebar, or the branch list come back empty.</li>
 </ul>
 </section>
 <section id="v0.7.0">
@@ -572,10 +569,7 @@
 </section>
 <section id="v0.3.2">
 <h2><a href="#v0.3.2">0.3.2</a> <time datetime="2026-07-12">July 12, 2026</time></h2>
-<h3 class="kind-fixed">Fixed</h3>
-<ul>
-<li>The download page on zcodeapp.com now shows the current version automatically and states the real requirement, <strong>macOS Tahoe 26.2 or newer</strong>, instead of macOS Sequoia, which was never supported.</li>
-</ul>
+<p>Maintenance release with no user-visible changes.</p>
 </section>
 <section id="v0.3.1">
 <h2><a href="#v0.3.1">0.3.1</a> <time datetime="2026-07-12">July 12, 2026</time></h2>
@@ -586,12 +580,9 @@
 </section>
 <section id="v0.3.0">
 <h2><a href="#v0.3.0">0.3.0</a> <time datetime="2026-07-12">July 12, 2026</time></h2>
-<h3 class="kind-new">New</h3>
-<ul>
-<li>Builds and tests that an agent starts through the local API no longer post notifications, so agent-run builds stay quiet.</li>
-</ul>
 <h3 class="kind-improved">Improved</h3>
 <ul>
+<li>Builds and tests that an agent starts through the local API no longer post notifications, so agent-run builds stay quiet.</li>
 <li>Updated terminal engine with rendering, scrolling and memory-leak fixes.</li>
 </ul>
 <h3 class="kind-fixed">Fixed</h3>
