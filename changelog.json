@@ -1,6 +1,24 @@
 {
   "versions": [
     {
+      "version": "0.47.0",
+      "date": "2026-11-25",
+      "entries": [
+        {
+          "kind": "new",
+          "text": "Move an idle Claude Code session to another worktree of the same repo: drag its tab onto the worktree, or right-click the tab ▸ **Move to Worktree**. Claude continues the same conversation in the new folder, the tab's reminders and triggers go with it, and when you quit Claude the terminal follows to the new folder too."
+        },
+        {
+          "kind": "new",
+          "text": "The update window now shows what's new: every change since the version you're on, newest first. The full list is at [zcodeapp.com/changelog.html](https://zcodeapp.com/changelog.html)."
+        },
+        {
+          "kind": "improved",
+          "text": "The Zcode skill now reaches Codex and Antigravity too: when either is enabled or installed, Zcode also writes it to `.agents/skills/zcode`."
+        }
+      ]
+    },
+    {
       "version": "0.46.1",
       "date": "2026-11-25",
       "entries": [
