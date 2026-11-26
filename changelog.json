@@ -1,6 +1,16 @@
 {
   "versions": [
     {
+      "version": "0.52.0",
+      "date": "2026-11-26",
+      "entries": [
+        {
+          "kind": "fixed",
+          "text": "**Check for Updates** no longer fails with \"GitHub is temporarily limiting update checks from your network\" when other apps on your network have used up GitHub's hourly limit."
+        }
+      ]
+    },
+    {
       "version": "0.51.0",
       "date": "2026-11-26",
       "entries": [
