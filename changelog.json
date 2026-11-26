@@ -1,6 +1,16 @@
 {
   "versions": [
     {
+      "version": "0.53.0",
+      "date": "2026-11-26",
+      "entries": [
+        {
+          "kind": "fixed",
+          "text": "Clicking a file link that Antigravity prints in a terminal tab, or one that points at a range of lines like `plan.md:7-18`, now opens the file instead of showing \"Link blocked\"."
+        }
+      ]
+    },
+    {
       "version": "0.52.0",
       "date": "2026-11-26",
       "entries": [
